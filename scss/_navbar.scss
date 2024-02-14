@@ -1,0 +1,78 @@
+$black : #000000;
+$white: #ffffff;
+
+header{
+    margin-top: 6rem;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba($black, 0.6);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1;
+
+    h1{
+        font-size: 24px;
+        color:white;
+    }
+    
+    .hamburger {
+        // height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 2rem;
+        padding: 0.5rem 0 0.5rem 0;
+        cursor: pointer;
+
+        div{
+            height: 8px;
+            width: 50px;
+            background-color: white;
+            border-radius: 1rem;
+        }
+    }
+
+    .sides{
+        width: 10%;
+    }
+}
+
+
+#mySideNav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    left:0;
+    background-color: $black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+
+    a{
+        color: #818181;
+        text-decoration: none;
+        font-size: 36px;
+        margin: 0.5rem;
+
+        &:hover{
+            color:$white;
+            transition: 0.5s ease-in-out;
+        }
+    }
+
+}
+
+.closebtn{
+    position: absolute;
+    top: 0;
+    right: 1rem;
+}
