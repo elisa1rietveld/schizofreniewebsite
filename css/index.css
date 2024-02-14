@@ -1,0 +1,30 @@
+body {
+    display:flex ;
+    align-items: center;
+    justify-content: flex-start; 
+    height: 100vh;
+    margin: 0;
+    position:absolute
+}
+
+.content {
+    text-align: center;
+    margin-left: 10%; 
+}
+
+.left-aligned-photo {
+    display: inline-block;
+    max-width: 79%; 
+}
+
+.my-box1 {
+    width: 320px;
+    height: 100px;
+    background-color: #fcfcfc; 
+    padding: 90px; 
+    margin: 20px 0 25px -250px;
+  }
+
+  .my-box1 h1 {
+    margin-top: -50px;
+  }
