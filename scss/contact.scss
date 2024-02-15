@@ -1,15 +1,12 @@
+@use 'navbar';
 
+body {
+    font-family: Mulish;
+    margin: 0;
+    padding: 0;
+}
 
-
-* {
-    box-sizing: border-box;
-    background-color: #9e5757;
-  }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
@@ -117,4 +114,8 @@
       margin-top: 16px;
       font-style: italic;
     }
+  }
+
+  main{
+    margin: 0 50rem 0 50rem;
   }
