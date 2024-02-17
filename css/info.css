@@ -1,5 +1,5 @@
 header {
-  margin-top: 6rem;
+  margin-top: 4.2rem;
 }
 
 nav {
@@ -14,7 +14,7 @@ nav {
 }
 nav h1 {
   font-size: 24px;
-  color: white;
+  color: #ffffff;
 }
 nav .hamburger {
   display: flex;
@@ -27,7 +27,7 @@ nav .hamburger {
 nav .hamburger div {
   height: 8px;
   width: 50px;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 1rem;
 }
 nav .sides {
@@ -41,7 +41,7 @@ nav .sides {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #000000;
+  background-color: #ffffff;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 6rem;
@@ -55,7 +55,7 @@ nav .sides {
   margin: 0.5rem;
 }
 #mySideNav a:hover {
-  color: #ffffff;
+  color: rgb(238, 234, 235);
   transition: 0.5s ease-in-out;
 }
 

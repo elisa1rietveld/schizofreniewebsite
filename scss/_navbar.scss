@@ -1,8 +1,8 @@
-$black : #000000;
-$white: #ffffff;
+
+@import 'config';
 
 header{
-    margin-top: 6rem;
+    margin-top: 4.2rem;
 }
 
 nav{
@@ -17,7 +17,7 @@ nav{
 
     h1{
         font-size: 24px;
-        color:white;
+        color:$white;
     }
     
     .hamburger {
@@ -32,7 +32,7 @@ nav{
         div{
             height: 8px;
             width: 50px;
-            background-color: white;
+            background-color: $white;
             border-radius: 1rem;
         }
     }
@@ -42,7 +42,6 @@ nav{
     }
 }
 
-
 #mySideNav{
     height: 100%;
     width: 0;
@@ -50,7 +49,7 @@ nav{
     z-index: 1;
     top:0;
     left:0;
-    background-color: $black;
+    background-color: $white;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 6rem;
@@ -58,13 +57,13 @@ nav{
     flex-direction: column;
 
     a{
-        color: #818181;
+        color: $darker;
         text-decoration: none;
         font-size: 36px;
         margin: 0.5rem;
 
         &:hover{
-            color:$white;
+            color:$bg;
             transition: 0.5s ease-in-out;
         }
     }
