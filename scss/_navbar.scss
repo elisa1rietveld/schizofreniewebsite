@@ -15,7 +15,7 @@ nav{
     justify-content: space-between;
     z-index: 1;
 
-    h1{
+    h2{
         font-size: 24px;
         color:white;
     }
@@ -58,14 +58,18 @@ nav{
     flex-direction: column;
 
     a{
-        color: #818181;
+        color: $black;
         text-decoration: none;
         font-size: 36px;
-        margin: 0.5rem;
+        padding: 0.5rem;
+        width: 90%;
+        border-radius: 1rem;
+        margin-left: 1rem;
 
         &:hover{
-            color:$white;
+            // color:$darker;
             transition: 0.5s ease-in-out;
+            background-color: $darker;
         }
     }
 
@@ -75,4 +79,8 @@ nav{
     position: absolute;
     top: 0;
     right: 1rem;
+
+    &:hover{
+    background-color:$white !important;
+    }
 }
