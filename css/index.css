@@ -12,7 +12,7 @@ nav {
   justify-content: space-between;
   z-index: 1;
 }
-nav h1 {
+nav h2 {
   font-size: 24px;
   color: #ffffff;
 }
@@ -49,14 +49,17 @@ nav .sides {
   flex-direction: column;
 }
 #mySideNav a {
-  color: #818181;
+  color: #000000;
   text-decoration: none;
   font-size: 36px;
-  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 90%;
+  border-radius: 1rem;
+  margin-left: 1rem;
 }
 #mySideNav a:hover {
-  color: rgb(238, 234, 235);
   transition: 0.5s ease-in-out;
+  background-color: #818181;
 }
 
 .closebtn {
@@ -64,15 +67,14 @@ nav .sides {
   top: 0;
   right: 1rem;
 }
+.closebtn:hover {
+  background-color: #ffffff !important;
+}
 
 body, html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 body {
@@ -83,32 +85,49 @@ body {
   background-color: rgb(238, 234, 235);
 }
 
+header {
+  margin: 0;
+}
+
 .bg-image {
-  position: absolute;
-  top: 0;
-  height: 100%;
+  aspect-ratio: 1/1;
+  width: 70%;
   z-index: -1;
+  position: relative;
+  overflow-y: hidden;
 }
 
 #intro {
-  background-color: rgb(238, 234, 235);
-  box-shadow: 2px 2px #e7e2e3;
-  width: 40%;
-  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 1px 1px #e7e2e3;
+  width: 30%;
+  height: fit-content;
+  position: relative;
   top: 30%;
-  left: 35%;
+  left: -10%;
 }
 #intro h1 {
+  background-color: #f7f7f7;
   font-size: 76px;
-  margin: 0;
-  padding: 0.25em 1rem;
+  margin: 0 !important;
+  padding: 0.25em 1rem !important;
+  font-weight: 300;
 }
-#intro p {
-  background-color: #f5f2f3;
-  padding: 0.5em 1rem;
+#intro p, #intro a {
+  padding: 0 1rem;
   margin: 0;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.8em;
+}
+#intro a {
+  color: #000000;
+  text-underline-offset: 0.25rem;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
 }
 
 /*# sourceMappingURL=index.css.map */
