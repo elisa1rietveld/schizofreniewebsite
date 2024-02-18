@@ -1,2 +1,5 @@
-/node_modules/
-/css/
+# fuck node modules
+node_modules/
+
+# hello
+css/*
