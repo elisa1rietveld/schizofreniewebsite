@@ -30,7 +30,7 @@ body {
   .my-box1 {
       width: 320px;
       height: 100px;
-      background-color: #fcfcfc; 
+      background-color: #fafafa; 
       padding: 90px; 
       margin: 20px 0 25px -250px;
     }
@@ -38,3 +38,5 @@ body {
     .my-box1 h1 {
       margin-top: -50px;
     }
+
+    #more {display: none;}
