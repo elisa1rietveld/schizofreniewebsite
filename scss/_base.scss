@@ -1,0 +1,20 @@
+@import 'config';
+body{
+    background-color: $bg;
+    font-family: "mulish";
+    
+}
+
+body,html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}

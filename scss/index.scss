@@ -1,9 +1,6 @@
 @use 'navbar';
-body,html{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@use 'base';
+
 
 // *{
 //     box-sizing: border-box;

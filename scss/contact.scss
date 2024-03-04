@@ -1,4 +1,5 @@
 @use 'navbar';
+@use 'base';
 
 body {
     font-family: mulish;
@@ -7,16 +8,20 @@ body {
 
 .parent {
   display: flex;
-  width: 1000px;
+  gap: 5rem; 
+  margin-left: 15rem;
+  width: auto;
 }
-  
+
 .container {
   width: 300px;
   padding: 24px;
   background-color: rgb(255, 255, 255);
   border-radius: 4px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; 
 }
+
 
 .container h1 {
   text-align: center;
@@ -78,7 +83,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 24px;
+    padding: 25px;
     margin: 50px;
   
     h1 {
@@ -111,10 +116,17 @@ body {
     }
   }
 
-  img {
-    width: 100%;
-    height: 150px;
-    opacity: 70%;
-    margin-top: -100px;
+  main {
+    background-color: rgb(238, 234, 235);
+    margin: auto;
   }
 
+  .content {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: solid;
+    width: 20%;
+    text-align: center;
+ }
+
+ 
