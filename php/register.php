@@ -1,14 +1,14 @@
 <?php
-require_once 'Controllers/login.php';
-?> 
+require_once 'Controllers/register.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Mulish:wght@455&family=Protest+Revolution&display=swap" rel="stylesheet">
-    <title>Log in</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Document</title>
 </head>
 <body>
 <header>
@@ -18,12 +18,8 @@ require_once 'Controllers/login.php';
 </header>
 <main class="container">
     <div class="login">
-    <?php if ($loading): ?>
-        <h1>Logging in...</h1>
-        
-    <?php else: ?>
-        <h1>log In!</h1>
-        <form action="login.php" method="post">
+        <h1>Register</h1>
+        <form action="register.php" method="post">
             <label for="username">Gebruikersnaam</label>
             <input type="text" name="username" id="username">  
 
@@ -31,13 +27,12 @@ require_once 'Controllers/login.php';
             <input type="password" name="password" id="password">
             
         <?php if (isset($handler)): ?>
-            <p class="loginError">username or password incorrect</p>
+            <p class="loginError">User created! Redirecting...</p>
         <?php endif; ?>
         
-            <button type="submit" id="submit">Log in!</button>
-            <a href="register.php">Create account?</a>
+            <button type="submit" id="submit">Register</button>
+            <a href="login.php">Already have an account?</a>
         </form>
-    <?php  endif; ?>
     </div>
 </main>
 </body>
