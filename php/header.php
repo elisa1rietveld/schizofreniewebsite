@@ -4,9 +4,9 @@
                 <ul>
                     <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
                     <li><a href="http://www.schizo.com/index.php">Home</a></li>
-                    <li><a href="http://www.schizo.com/info.html">Informatie</a></li>
-                    <li><a href="http://www.schizo.com/contact.html">Contact</a></li>
-                    <li><a href="http://www.schizo.com/FAQ.html">FAQ</a></li>
+                    <li><a href="http://www.schizo.com/info.php">Informatie</a></li>
+                    <li><a href="http://www.schizo.com/contact.php">Contact</a></li>
+                    <li><a href="http://www.schizo.com/FAQ.php">FAQ</a></li>
                     <li><a href="http://www.schizo.com/php/profile.php">My profile</a></li>
                 </ul>
             </span>
