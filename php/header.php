@@ -1,4 +1,4 @@
-    <header>
+<header>
         <nav>
             <span class="sidenav" id="mySideNav">
                 <ul>

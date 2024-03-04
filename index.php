@@ -12,7 +12,7 @@
     <title>Home</title>
 </head>
 <body>
-    <?php include_once 'php/header.php'; ?>
+    <?php include_once 'php/header.php';?>
     <div class="content">
         <img src="img/Index1.png" alt="Left-aligned Photo" class="left-aligned-photo">
     </div>
