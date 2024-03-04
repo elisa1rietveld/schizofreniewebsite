@@ -1,6 +1,7 @@
 <?php
 require 'Lib/database.php';
 session_start();
+$db = new Database();
 $handler = NULL;
 
 //defines if it should show the loading screen
@@ -8,7 +9,6 @@ $loading = false;
 
 // echo password_hash('geheim', PASSWORD_BCRYPT);
 if (isset($_POST['username'])) {
-    $db = new Database();
     $db->query('SELECT * FROM Users WHERE username = :username;');
     $db->bind(':username', $_POST['username']);
     $result = $db->single();

@@ -11,8 +11,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $db->query('INSERT INTO Users(username, password) VALUES (:username, :password);');
         $db->bind(':username', $_POST['username']);
         $db->bind(':password', $passHash);
+
         if ($db->execute()) {
-            header('Refresh: 5, url=../index.php');
+            header('Refresh: 3, url=../index.php');
         } else {
             echo "error";
             return 'false!!!!';

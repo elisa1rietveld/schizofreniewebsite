@@ -18,15 +18,13 @@ if (isset($_SESSION['user'])) : ?>
     <?php include_once 'header.php'; ?>
     <main>
         <h1>Hallo <?php echo $_SESSION['user']?>!</h1>
-    
-    
-    
-    
-    
-    
+        <!-- if statement to show a "make the test" link if the test wasn't made -->
+        <!-- else statement with a section with the % chance of having schizo -->
+        <!-- in said else statement another section with some information about what to do  -->
+        <!-- another section with account management -->
     </main>
     <script src="../js/index.js"></script>
 </body>
 </html>
 
-<?php else : header('Refresh: 0, url=http://www.schizo.com/php/login.php'); endif;?>
+<?php else : header('Refresh: 0, url=../php/login.php'); endif;?>
