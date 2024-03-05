@@ -22,7 +22,7 @@ require_once 'Controllers/login.php';
         <h1>Logging in...</h1>
         
     <?php else: ?>
-        <h1>log In!</h1>
+        <h1>Log In!</h1>
         <form action="login.php" method="post">
             <label for="username">Gebruikersnaam</label>
             <input type="text" name="username" id="username">  

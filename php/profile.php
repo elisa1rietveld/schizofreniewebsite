@@ -1,7 +1,6 @@
 <?php
 session_start();
-$qMade = 0;
-$num = 90;
+include_once 'Controllers/Profile.php';
 
 if (isset($_SESSION['user'])) : ?>
 
@@ -38,7 +37,7 @@ if (isset($_SESSION['user'])) : ?>
                 <?php if ($qMade == 5): ?>
                     <p>je hebt de test gemaakt! wil je hem opnieuw doen?</p>
                     <a href="">redo test</a>
-                <?php elseif ($qMade >= 1): ?>
+                <?php elseif ($qMade > 0): ?>
                     <p>Je bent nog bezig met de test, ga verder?</p>
                     <a href="">Verder met de test</a>
                 <?php else: ?>
@@ -77,16 +76,7 @@ if (isset($_SESSION['user'])) : ?>
     </main>
     <script src="../js/index.js"></script>
     <script src="../js/kms.js"> 
-    // // ik ben hier niet trots op
-    //     let num = 0.<?php echo $num ?>;
-    //     console.log(num);
-    //     let round = 816.81;
-    //     let blue = round * num;
-    //     let grey = round - blue;
-
-    //     const circle = document.querySelector('circle.fg');
-    //     circle.setAttribute("stroke-dasharray",blue + " " + grey);
-    </script>
+</script>
 </body>
 </html>
 
