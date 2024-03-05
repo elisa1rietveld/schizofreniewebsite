@@ -4,11 +4,11 @@
 // Er lijkt geen manier te zijn zonder jQuery.
 
         let bignum = document.getElementById("nice").innerHTML;
-        bignum = "0.5" + bignum.replace("%","");
+        bignum = "0." + bignum.replace("%","");
 
         let num = 0. + Number(bignum);
         console.log(num);
-        let round = 816.81;
+        let round = 816.81408993334624200028727965267;
         let blue = round * num;
         let grey = round - blue;
 

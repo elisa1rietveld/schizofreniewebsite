@@ -1,7 +1,7 @@
 <?php
 session_start();
 $qMade = 0;
-$num = 55;
+$num = 90;
 
 if (isset($_SESSION['user'])) : ?>
 
