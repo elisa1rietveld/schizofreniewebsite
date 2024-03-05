@@ -6,3 +6,44 @@ h1 {
     text-align: center;
     font-size: 48px;
 }
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section {
+    padding: 1.5rem;
+    background: $white;
+    width: 46%;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 1px darken($white, 15);
+
+    display: flex;
+    flex-direction: column;
+
+    h2{
+        text-align: center;
+        font-size: 48px;
+    }
+    *{
+        font-size: 32px;
+    }
+}
+
+a{
+    margin: 0.5rem 0;
+}
+
+main {
+    padding: 0 5rem;
+}
+
+.manage {
+    p{
+        margin: 0.5rem 0;
+    }
+}
