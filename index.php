@@ -8,38 +8,7 @@
     <title>Home</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <span class="sidenav" id="mySideNav">
-                <ul>
-                    <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="info.html">Informatie</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="FAQ.html">FAQ</a></li>
-                </ul>
-            </span>
-        </nav>
-        
-
-        <div class="banner">
-            <span class="hamburger sides" onclick="openNav()">
-                <div></div>
-                <div></div>
-                <div></div>
-            </span>
-    
-            <div class="name">
-                <h2>SCHIZOFRENIE</h2>
-            </div>
-    
-            <div class="sides">
-                <a href="php/login.php">log in!</a>
-            </div>
-        </div>
-    </header>
-
-
+    <?php include_once 'php/header.php';?>
     <div class="content">
         <img src="img/Index1.png" alt="Left-aligned Photo" class="left-aligned-photo">
     </div>
