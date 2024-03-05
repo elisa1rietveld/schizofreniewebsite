@@ -71,6 +71,17 @@ main {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+
+
+
+        // svg bullshit
+        svg{
+            circle.fg {
+            transform: rotate(-90deg);
+            transform-origin: 150px 150px;
+            stroke-dasharray: '408.40 408.40';
+          }
+        }
     }
 }
 
