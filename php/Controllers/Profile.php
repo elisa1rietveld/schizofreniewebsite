@@ -20,9 +20,16 @@ $result = $db->single();
 foreach($result as $key => $question) {
     if (isset($question)) {
         $qMade++ ;
+        $total += $question;
     }
-    $total += $question;
+    // else {
+    //     $total = NULL;
+    //     break;
+    // }
 }
 
 // There is a total of 50 points, but we're working on a 0 to 100%. So I multiply.
 $num = $total * 2;
+
+$num = 75;
+$qMade =10;

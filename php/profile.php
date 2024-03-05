@@ -1,16 +1,16 @@
 <?php
 session_start();
-include_once 'Controllers/Profile.php';
 
 if (isset($_SESSION['user'])) : ?>
-
+<?php include_once 'Controllers/Profile.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/profile.css">
-    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Mulish:wght@455&family=Protest+Revolution&display=swap" rel="stylesheet">
+    <link href="                 https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Mulish:wght@455&family=Protest+Revolution&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Poppins:wght@500&display=swap">
     <title>Profile</title>
 </head>
 <body>
@@ -60,8 +60,16 @@ if (isset($_SESSION['user'])) : ?>
                         <text x="150" y="200" font-size="30" text-anchor="middle" fill="black" id='nice'><?php echo $num?>%</text> 
                     </svg>
                     <div class="box">
-                        <h3>You haven't done the test yet</h3>
-                        <p>Please do the test to see how big the chance is you have schizo</p>
+                        
+                        <?php if ($qMade == 10 && $num > 0) : ?>
+                            <h3>What I do now?</h3>
+                            <p>If you have a 60% chance or higher we recommend you looking help from a professional, our test is just to give a direction
+                               And is not made to perfectly predict your situation.
+                            </p>
+                        <?php else: ?>
+                            <h3>You haven't done the test yet</h3>
+                            <p>Please do the test to see how big the chance is you have schizo</p>
+                        <?php endif; ?>
                     </div>
                 </div>
             </section>

@@ -1,21 +1,32 @@
 @use 'base';
 @use 'navbar';
 @import 'config';
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Poppins:wght@500&display=swap);
+
+body,
+html {
+    font-family: 'Roboto', sans-serif;
+}
 
 h1 {
     text-align: center;
     font-size: 48px;
+    font-family: 'Poppins';
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+main {
+    padding: 0 10rem;
 }
 
 // default section makeup
@@ -31,42 +42,45 @@ section {
     display: flex;
     flex-direction: column;
 
-    h2{
+    h2 {
         text-align: center;
         font-size: 48px;
+        font-family: 'Poppins';
     }
-    *{
+
+    * {
         font-size: 32px;
     }
-    a{
+
+    a {
         margin: 0.5rem 0;
+        font-style: normal;
+        color: $blue;
     }
 
 
-}
-
-
-
-main {
-    padding: 0 10rem;
 }
 
 .manage {
-    p{
+
+    p {
         margin: 0.5rem 0;
     }
 }
 
 .test {
-    p,a{
+
+    p,
+    a {
         text-align: center;
     }
 }
 
 
 
-.result{
+.result {
     width: 100%;
+
     .results {
         display: flex;
         flex-direction: row;
@@ -75,24 +89,30 @@ main {
 
 
         // svg bullshit
-        svg{
+        svg {
             circle.fg {
-            transform: rotate(-90deg);
-            transform-origin: 150px 150px;
-            
-          }
+                transform: rotate(-90deg);
+                transform-origin: 150px 150px;
+
+            }
         }
+    }
+
+    .box {
+        max-width: 910px;
     }
 }
 
 #progress {
-    position:relative;
+    position: relative;
     bottom: 100px;
 }
 
 .contact {
     width: 100%;
-    p,a {
+
+    p,
+    a {
         padding: 0;
         margin: 0;
         width: fit-content;
