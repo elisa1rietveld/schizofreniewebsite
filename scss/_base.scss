@@ -2,11 +2,17 @@
 body{
     background-color: $bg;
     font-family: "mulish";
+
     
 }
 
+// oopsie woopsie I forgot to do this, If I do it now half the pages collapse :PPPPPPPPPPPPPPPPPPPPPP (Kill me) -Z
+// *{
+//     box-sizing: border-box;
+// }
+
 body,html{
-    box-sizing: border-box;
+    
     margin: 0;
     padding: 0;
 }

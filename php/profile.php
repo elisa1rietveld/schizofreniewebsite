@@ -49,6 +49,28 @@ if (isset($_SESSION['user'])) : ?>
 
             <section class="result">
                 <h2>Result</h2>
+                <div class="results">
+                    <!-- What i'm trying to do is make a progress circle. We currently only have the circle -->
+                    <!-- Js needs to be added to show the %, although I could probably use PHP functions for it aswell -->
+                    <!-- css is used for the animation -->
+                    <svg id="progress" width="300" height="300">
+                        <circle cx="150" cy="150" r="150" fill="blue" /> 
+                        <circle cx="150" cy="150" r="130" fill="white" />
+                        <text x="150" y="150" font-size="30" text-anchor="middle" fill="black">schizo Chance: </text>
+                        <text x="150" y="200" font-size="30" text-anchor="middle" fill="black"><?php echo "0%"?></text> 
+                    </svg>
+                    <div class="box">
+                        <h3>You haven't done the test yet</h3>
+                        <p>Please do the test to see how big the chance is you have schizo</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact">
+                <h2>Contact professionals</h2>
+                <p>To contact professionals you can go
+                <a href="../contact.php">here</a>. 
+                Alternatively we have health experts available in your local hospital</p>
             </section>
 
         </div>

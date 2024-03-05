@@ -7,6 +7,10 @@ h1 {
     font-size: 48px;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 .container{
     display: flex;
     justify-content: center;
@@ -14,11 +18,13 @@ h1 {
     flex-wrap: wrap;
 }
 
+// default section makeup
 section {
-    padding: 1.5rem;
+    padding: 2rem;
     background: $white;
-    width: 46%;
-    margin: 0.5rem;
+    // dit moet anders kunnen maar ik weet niet hoe. Later even aan jesse vragen
+    width: 49%;
+    margin: 0.45rem;
     border-radius: 1rem;
     box-shadow: 1px 1px 1px darken($white, 15);
 
@@ -35,12 +41,14 @@ section {
     a{
         margin: 0.5rem 0;
     }
+
+
 }
 
 
 
 main {
-    padding: 0 5rem;
+    padding: 0 10rem;
 }
 
 .manage {
@@ -52,5 +60,30 @@ main {
 .test {
     p,a{
         text-align: center;
+    }
+}
+
+
+
+.result{
+    width: 100%;
+    .results {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+#progress {
+    position:relative;
+    bottom: 100px;
+}
+
+.contact {
+    p,a {
+        padding: 0;
+        margin: 0;
+        width: fit-content;
+        height: fit-content;
     }
 }
