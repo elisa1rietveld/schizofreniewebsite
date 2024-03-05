@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+$qMade = 0;
 
 
 if (isset($_SESSION['user'])) : ?>
@@ -12,7 +12,7 @@ if (isset($_SESSION['user'])) : ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/profile.css">
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Mulish:wght@455&family=Protest+Revolution&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Profile</title>
 </head>
 <body>
     <?php include_once 'header.php'; ?>
@@ -34,11 +34,21 @@ if (isset($_SESSION['user'])) : ?>
             </section>
 
             <section class="test">
-                <h2>Zelftest</h2>
+                <h2>Selftest</h2>
+                <?php if ($qMade == 5): ?>
+                    <p>je hebt de test gemaakt! wil je hem opnieuw doen?</p>
+                    <a href="">redo test</a>
+                <?php elseif ($qMade >= 1): ?>
+                    <p>Je bent nog bezig met de test, ga verder?</p>
+                    <a href="">Verder met de test</a>
+                <?php else: ?>
+                    <p>Je hebt de test nog niet gedaan, wil je hem maken?</p>
+                    <a href="">Maak de test</a>
+                <?php endif; ?>
             </section>
 
-            <section class="test">
-                <h2>Resultaat</h2>
+            <section class="result">
+                <h2>Result</h2>
             </section>
 
         </div>

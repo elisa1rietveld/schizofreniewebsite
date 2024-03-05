@@ -32,11 +32,12 @@ section {
     *{
         font-size: 32px;
     }
+    a{
+        margin: 0.5rem 0;
+    }
 }
 
-a{
-    margin: 0.5rem 0;
-}
+
 
 main {
     padding: 0 5rem;
@@ -45,5 +46,11 @@ main {
 .manage {
     p{
         margin: 0.5rem 0;
+    }
+}
+
+.test {
+    p,a{
+        text-align: center;
     }
 }
