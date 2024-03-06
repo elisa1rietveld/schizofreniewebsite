@@ -45,5 +45,8 @@ WHERE password = '$2y$10$NbPB8zDOqqAfu.S0uvhkouO.YS1s8oP8se5ukqJx/J8ht2bnYA3ya';
 DELETE FROM Users
 WHERE username = 'Admin';
 
+DELETE FROM Questions
+WHERE userId = 1;
+
 DROP DATABASE schizo;
 DROP TABLE Questions;

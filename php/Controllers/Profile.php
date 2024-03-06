@@ -22,8 +22,7 @@ if(isset($result->Q1)){
         if (isset($question)) {
             $qMade++ ;
             $total += $question;
-        }
-        else {
+        } else {
             $total = NULL;
             break;
         }
