@@ -9,15 +9,16 @@ Class Verify
     }
     // verifies password
     public function Pass($user,$pass) {
+        
         // gets database password
         $this->db->Query('SELECT password
                           FROM Users
                           WHERE username = :username;');
         $this->db->Bind(':username', $user);
-        $result = $this->db->single()->password;
+        $result = $this->db->single();
 
         // checks if $pass is the same as database password
-        if(isset($result) && password_verify($pass, $result)) {
+        if(isset($result->password) && password_verify($pass, $result->password)) {
             return TRUE;
         } else {
             return FALSE;
@@ -26,6 +27,7 @@ Class Verify
 
     // verifies Usernames
     public function User($user) {
+        
         // gets username
         $this->db->Query('SELECT username
                           FROM Users
@@ -41,6 +43,8 @@ Class Verify
             return FALSE;
         }
     }
+
+    // 
 
 }
 
