@@ -16,7 +16,7 @@ if (isset($_POST['username'])) {
     //verifies password and goes back to homepage
     if(isset($result->password) && password_verify($_POST['password'], $result->password)) {
         $_SESSION['user'] = $result->Username;
-        header('Refresh: 1, url=../index.php');
+        header('Refresh: 1, url=/php/profile.php');
         $loading = true;
     } else {
         $handler = 'error';

@@ -14,7 +14,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $db->bind(':password', $passHash);
 
         if ($db->execute()) {
-            header('Refresh: 3, url=../php/login.php');
+            header('Refresh: 3, url=/php/login.php');
         } else {
             echo "error";
             return 'false!!!!';

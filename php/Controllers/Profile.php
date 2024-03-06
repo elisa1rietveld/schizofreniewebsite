@@ -22,14 +22,15 @@ foreach($result as $key => $question) {
         $qMade++ ;
         $total += $question;
     }
-    // else {
-    //     $total = NULL;
-    //     break;
-    // }
+    else {
+        $total = NULL;
+        break;
+    }
 }
 
 // There is a total of 50 points, but we're working on a 0 to 100%. So I multiply.
 $num = $total * 2;
 
-$num = 75;
-$qMade =10;
+// test values
+$num = 66;
+$qMade = 5;

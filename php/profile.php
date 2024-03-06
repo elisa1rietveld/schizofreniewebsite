@@ -8,12 +8,16 @@ if (isset($_SESSION['user'])) : ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="/css/profile.css">
     <link href="                 https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Mulish:wght@455&family=Protest+Revolution&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Poppins:wght@500&display=swap">
     <title>Profile</title>
 </head>
 <body>
+    <div class='background'>
+        <!-- <div class="color"></div>
+        <img src="../img/Index1.png" alt=""> -->
+    </div>
     <?php include_once 'header.php'; ?>
     <main>
         <h1>Hallo <?php echo $_SESSION['user']?>!</h1>
@@ -34,9 +38,9 @@ if (isset($_SESSION['user'])) : ?>
 
             <section class="test">
                 <h2>Selftest</h2>
-                <?php if ($qMade == 5): ?>
+                <?php if ($qMade == 10): ?>
                     <p>je hebt de test gemaakt! wil je hem opnieuw doen?</p>
-                    <a href="">redo test</a>
+                    <a href="">Redo test</a>
                 <?php elseif ($qMade > 0): ?>
                     <p>Je bent nog bezig met de test, ga verder?</p>
                     <a href="">Verder met de test</a>
@@ -77,15 +81,15 @@ if (isset($_SESSION['user'])) : ?>
             <section class="contact">
                 <h2>Contact professionals</h2>
                 <p>To contact professionals you can go
-                <a href="../contact.php">here</a>. 
+                <a href="/contact.php">here</a>. 
                 Alternatively we have health experts available in your local hospital</p>
             </section>
         </div>
     </main>
-    <script src="../js/index.js"></script>
-    <script src="../js/kms.js"> 
+    <script src="/js/index.js"></script>
+    <script src="/js/kms.js"> 
 </script>
 </body>
 </html>
 
-<?php else : header('Refresh: 0, url=../php/login.php'); endif;?>
+<?php else : header('Refresh: 0, url=/php/login.php'); endif;?>

@@ -6,14 +6,14 @@ require_once 'Controllers/login.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="/css/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Mulish:wght@455&family=Protest+Revolution&display=swap" rel="stylesheet">
     <title>Log in</title>
 </head>
 <body>
 <header>
     <div class="background">
-        <img src="../img/login-background.jpg" alt="">
+        <img src="/img/login-background.jpg" alt="">
     </div>
 </header>
 <main class="container">
