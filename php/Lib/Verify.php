@@ -35,7 +35,7 @@ Class Verify
 
         // checks if $user and database username are the same, 
         // which it already did as it had something in there but still. We have to be sure!!!
-        if($user == $result) {
+        if(isset($result->username) && $user == $result->username) {
             return  TRUE;
         } else {
             return FALSE;
