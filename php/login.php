@@ -7,6 +7,7 @@ require_once 'Controllers/login.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Poppins:wght@500&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Mulish:wght@455&family=Protest+Revolution&display=swap" rel="stylesheet">
     <title>Log in</title>
 </head>
@@ -19,11 +20,11 @@ require_once 'Controllers/login.php';
 <main class="container">
     <div class="login">
     <?php if ($loading): ?>
-        <h1>Logging in...</h1>
+        <h1 class="logging">Logging in...</h1>
         
     <?php else: ?>
         <h1>Log In!</h1>
-        <form action="login.php" method="post">
+        <form action="login.php" method="post" autocomplete="off">
             <label for="username">Gebruikersnaam</label>
             <input type="text" name="username" id="username">  
 

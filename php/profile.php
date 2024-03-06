@@ -1,7 +1,7 @@
 <?php
-session_start();
-
-if (isset($_SESSION['user'])) : ?>
+    session_start();
+    if (!isset($_SESSION['user'])) :
+        header('Refresh: 0, url=/php/login.php'); else: ?>
 <?php include_once 'Controllers/Profile.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -90,5 +90,4 @@ if (isset($_SESSION['user'])) : ?>
 </script>
 </body>
 </html>
-
-<?php else : header('Refresh: 0, url=/php/login.php'); endif;?>
+<?php endif;?>
