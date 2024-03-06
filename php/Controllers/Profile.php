@@ -17,14 +17,16 @@ $db->bind(':username',$_SESSION['user']);
 $result = $db->single();
 
 // checks how many questions have been made and the total value of them
-foreach($result as $key => $question) {
-    if (isset($question)) {
-        $qMade++ ;
-        $total += $question;
-    }
-    else {
-        $total = NULL;
-        break;
+if(isset($result->Q1)){
+    foreach($result as $key => $question) {
+        if (isset($question)) {
+            $qMade++ ;
+            $total += $question;
+        }
+        else {
+            $total = NULL;
+            break;
+        }
     }
 }
 
@@ -32,5 +34,5 @@ foreach($result as $key => $question) {
 $num = $total * 2;
 
 // test values
-$num = 66;
-$qMade = 5;
+// $num = 66;
+// $qMade = 5;
