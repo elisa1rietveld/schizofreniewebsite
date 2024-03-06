@@ -31,8 +31,7 @@ if (isset($_SESSION['user'])) : ?>
                 <h2>Account</h2>
                 <p>Gebruikersnaam: <?php echo $_SESSION['user']?></p>
                 <p>Password: ***********</p>
-                <a href="">Change password</a>
-                <a href="">Change username</a>
+                <a href="change.php">Change password</a>
                 <a href="Controllers/delete.php">Delete account</a>
             </section>
 

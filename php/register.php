@@ -8,7 +8,7 @@ require_once 'Controllers/register.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Mulish:wght@455&family=Protest+Revolution&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/login.css">
-    <title>Document</title>
+    <title>Register</title>
 </head>
 <body>
 <header>
