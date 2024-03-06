@@ -33,7 +33,7 @@ if (isset($_SESSION['user'])) : ?>
                 <p>Password: ***********</p>
                 <a href="">Change password</a>
                 <a href="">Change username</a>
-                <a href="">Delete account</a>
+                <a href="Controllers/delete.php">Delete account</a>
             </section>
 
             <section class="test">
