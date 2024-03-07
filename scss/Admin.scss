@@ -1,0 +1,13 @@
+@use 'profile';
+@import 'config';
+
+.user-managing{
+    width: 100%;
+}
+
+table,tr,th,td{
+    border-collapse: collapse;
+    margin-top: 2rem;
+    border: 2px $black solid;
+    text-align: center;
+}

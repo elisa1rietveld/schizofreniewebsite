@@ -8,13 +8,13 @@ Class Verify
         $this->db = new Database();
     }
     // verifies password
-    public function Pass($user,$pass) {
+    public function pass($user,$pass) {
         
         // gets database password
-        $this->db->Query('SELECT password
+        $this->db->query('SELECT password
                           FROM Users
                           WHERE username = :username;');
-        $this->db->Bind(':username', $user);
+        $this->db->bind(':username', $user);
         $result = $this->db->single();
 
         // checks if $pass is the same as database password
@@ -26,13 +26,13 @@ Class Verify
     }
 
     // verifies Usernames
-    public function User($user) {
+    public function user($user) {
         
         // gets username
-        $this->db->Query('SELECT username
+        $this->db->query('SELECT username
                           FROM Users
                           WHERE username = :username;');
-        $this->db->Bind(':username',$user);
+        $this->db->bind(':username',$user);
         $result = $this->db->single();
 
         // checks if $user and database username are the same, 
@@ -44,7 +44,21 @@ Class Verify
         }
     }
 
-    // 
+    // verifies user type
+    public function userType(string $user, int $type) {
+        // gets usertype
+        $this->db->query('SELECT userType
+                          FROM Users
+                          WHERE username = :username;');
+        $this->db->bind(':username', $user);
+        $result = $this->db->single();
 
+        // checks if usertype is the same as given type.
+        if(isset($result->userType) && $result->userType == $type) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
 }
 
