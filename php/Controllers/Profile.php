@@ -1,6 +1,14 @@
 <?php
 include_once 'Lib/database.php';
+include_once 'Lib/Verify.php';
+
 $db = new Database();
+$verify = new Verify();
+
+if ($verify->userType($_SESSION['user'], 88)) {
+    header('Refresh: 0, url=Admin.php');
+    exit;
+}
 
 $qMade = 0;
 $total = 0;
@@ -23,7 +31,7 @@ if(isset($result->Q1)){
             $qMade++ ;
             $total += $question;
         } else {
-            $total = NULL;
+            $total = 0;
             break;
         }
     }
@@ -31,7 +39,3 @@ if(isset($result->Q1)){
 
 // There is a total of 50 points, but we're working on a 0 to 100%. So I multiply.
 $num = $total * 2;
-
-// test values
-// $num = 66;
-// $qMade = 5;

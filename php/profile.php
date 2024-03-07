@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
     if (!isset($_SESSION['user'])) :
         header('Refresh: 0, url=/php/login.php'); else: ?>
 <?php include_once 'Controllers/Profile.php'; ?>

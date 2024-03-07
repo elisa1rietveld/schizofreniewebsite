@@ -5,8 +5,11 @@ CREATE TABLE Users (
 	UserId int NOT NULL AUTO_INCREMENT,
     Username varchar(128) NOT NULL,
     password varchar(128) NOT NULL,
+    userType int,
     PRIMARY KEY (userId)   
 );
+-- usertype 1: Default user
+-- usertype 88: Admin  
 
 CREATE TABLE Questions(
 TestId int NOT NULL AUTO_INCREMENT,
@@ -39,8 +42,8 @@ ON Questions.UserId = Users.UserId;
 select * from Users;
 
 UPDATE Users
-SET password = '$2y$10$Fs/PHZjoeBMyOJNEdGgm3Ocmy4aJM0MRKGhhrLpvu/JHuLfEp4GV2'
-WHERE password = '$2y$10$NbPB8zDOqqAfu.S0uvhkouO.YS1s8oP8se5ukqJx/J8ht2bnYA3ya';
+SET userType = 88
+WHERE Username = 'Admin';
 
 DELETE FROM Users
 WHERE username = 'Admin';
