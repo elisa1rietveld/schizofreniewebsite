@@ -11,6 +11,12 @@
 </head>
     <?php include_once 'php/header.php';?>
 <body>
+    <!-- Dit stukje code zorgt ervoor dat het alleen werkt als je ingelogd ben. Haal het weg als je eraan gaat werken -Zico-->
+    <?php if (!isset($_SESSION['user'])) {
+    header('refresh: 0, url=/php/login.php');
+    }?> 
+
+
 
     <script src="js/index.js"></script>
     
