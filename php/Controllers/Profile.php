@@ -31,11 +31,6 @@ if(isset($result->Q1)){
 // There is a total of 50 points, but we're working on a 0 to 100%. So I multiply.
 $num = $total * 2;
 
-<<<<<<< Updated upstream
-// test values
-// $num = 66;
-// $qMade = 5;
-=======
 $num = 15;
 
 $round = 816.81408993334624200028727965267;
@@ -43,4 +38,3 @@ $blue = $round * ($num / 100);
 $grey = $round - $blue;
 
 $stroke = '"'. $blue . ' ' . $grey . '"';
->>>>>>> Stashed changes
