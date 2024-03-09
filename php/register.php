@@ -28,8 +28,9 @@ require_once 'Controllers/register.php';
             
         <?php if (isset($handler)): ?>
             <p class="loginError">User created! Redirecting...</p>
+        <?php elseif ($error) : ?>
+            <p class="loginError">username or password is not allowed</p>
         <?php endif; ?>
-        
             <button type="submit" id="submit">Register</button>
             <a href="login.php">Already have an account?</a>
         </form>

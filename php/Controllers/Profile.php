@@ -1,21 +1,12 @@
 <?php
 include_once 'Lib/database.php';
-include_once 'Lib/Verify.php';
-
 $db = new Database();
-$verify = new Verify();
-
-if ($verify->userType($_SESSION['user'], 88)) {
-    header('Refresh: 0, url=Admin.php');
-    exit;
-}
 
 $qMade = 0;
 $total = 0;
 
 // Returns all the Questions Anwsered. 
 // Current problem: Need to remove the old Record if we're redoing the test!!!!!
-
 $db->Query('SELECT Questions.Q1,Questions.Q2,Questions.Q3,Questions.Q4,Questions.Q5,Questions.Q6,Questions.Q7,Questions.Q8,Questions.Q9,Questions.Q10
             FROM Users
             RIGHT JOIN Questions
@@ -31,7 +22,7 @@ if(isset($result->Q1)){
             $qMade++ ;
             $total += $question;
         } else {
-            $total = 0;
+            $total = NULL;
             break;
         }
     }
@@ -39,3 +30,17 @@ if(isset($result->Q1)){
 
 // There is a total of 50 points, but we're working on a 0 to 100%. So I multiply.
 $num = $total * 2;
+
+<<<<<<< Updated upstream
+// test values
+// $num = 66;
+// $qMade = 5;
+=======
+$num = 15;
+
+$round = 816.81408993334624200028727965267;
+$blue = $round * ($num / 100);
+$grey = $round - $blue;
+
+$stroke = '"'. $blue . ' ' . $grey . '"';
+>>>>>>> Stashed changes

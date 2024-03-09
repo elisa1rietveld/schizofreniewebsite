@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
     if (!isset($_SESSION['user'])) :
         header('Refresh: 0, url=/php/login.php'); else: ?>
 <?php include_once 'Controllers/Profile.php'; ?>
@@ -15,8 +15,7 @@ session_start();
 </head>
 <body>
     <div class='background'>
-        <!-- <div class="color"></div>
-        <img src="../img/Index1.png" alt=""> -->
+        <img src="../img/Index1.png" alt="">
     </div>
     <?php include_once 'header.php'; ?>
     <main>
@@ -38,7 +37,7 @@ session_start();
             <section class="test">
                 <h2>Selftest</h2>
                 <?php if ($qMade == 10): ?>
-                    <p>je hebt de test gemaakt! wil je hem opnieuw doen?</p>
+                    <p>Je hebt de test gemaakt! Wil je hem opnieuw doen?</p>
                     <a href="">Redo test</a>
                 <?php elseif ($qMade > 0): ?>
                     <p>Je bent nog bezig met de test, ga verder?</p>
@@ -58,7 +57,7 @@ session_start();
                     <svg id="progress" width="300" height="300" viewBox=" 0 0 300 300">
                         <circle class="bg" cx="150" cy="150" r="130" fill='none' stroke="grey" stroke-width="20" />
                         <circle class="fg" cx="150" cy="150" r="130" fill='none' stroke="blue" stroke-width="20" 
-                        stroke-dasharray='408.40 408.40'/> 
+                        stroke-dasharray= <?php echo $stroke?>/> 
                         <text x="150" y="150" font-size="30" text-anchor="middle" fill="black">schizo Chance: </text>
                         <text x="150" y="200" font-size="30" text-anchor="middle" fill="black" id='nice'><?php echo $num?>%</text> 
                     </svg>
@@ -86,8 +85,6 @@ session_start();
         </div>
     </main>
     <script src="/js/index.js"></script>
-    <script src="/js/kms.js"> 
-</script>
 </body>
 </html>
 <?php endif;?>

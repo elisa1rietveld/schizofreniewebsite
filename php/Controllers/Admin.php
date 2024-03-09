@@ -1,6 +1,6 @@
 <?php
 include_once 'Lib/database.php';
-include_once 'Lib/verify.php';
+include_once 'Lib/Verify.php';
 
 $db = new Database();
 $verify = new Verify();
@@ -12,7 +12,7 @@ if (!$verify->userType($_SESSION['user'], 88)) {
 
 $db->query('SELECT UserId,Username
             FROM Users
-            WHERE userType = 1;');
+            WHERE userRole = 1;');
 
 $result = $db->resultSet();
 

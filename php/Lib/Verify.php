@@ -8,13 +8,13 @@ Class Verify
         $this->db = new Database();
     }
     // verifies password
-    public function pass($user,$pass) {
+    public function Pass($user,$pass) {
         
         // gets database password
-        $this->db->query('SELECT password
+        $this->db->Query('SELECT password
                           FROM Users
                           WHERE username = :username;');
-        $this->db->bind(':username', $user);
+        $this->db->Bind(':username', $user);
         $result = $this->db->single();
 
         // checks if $pass is the same as database password
@@ -26,13 +26,13 @@ Class Verify
     }
 
     // verifies Usernames
-    public function user($user) {
+    public function User($user) {
         
         // gets username
-        $this->db->query('SELECT username
+        $this->db->Query('SELECT username
                           FROM Users
                           WHERE username = :username;');
-        $this->db->bind(':username',$user);
+        $this->db->Bind(':username',$user);
         $result = $this->db->single();
 
         // checks if $user and database username are the same, 
@@ -44,21 +44,26 @@ Class Verify
         }
     }
 
+<<<<<<< Updated upstream
+    // 
+
+=======
     // verifies user type
     public function userType(string $user, int $type) {
         // gets usertype
-        $this->db->query('SELECT userType
+        $this->db->query('SELECT userRole
                           FROM Users
                           WHERE username = :username;');
         $this->db->bind(':username', $user);
         $result = $this->db->single();
 
         // checks if usertype is the same as given type.
-        if(isset($result->userType) && $result->userType == $type) {
+        if(isset($result->userRole) && $result->userRole == $type) {
             return TRUE;
         } else {
             return FALSE;
         }
     }
+>>>>>>> Stashed changes
 }
 
