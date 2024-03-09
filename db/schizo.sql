@@ -43,13 +43,11 @@ ON Questions.UserId = Users.UserId;
 select * from Users;
 
 UPDATE Users
-<<<<<<< Updated upstream
 SET password = '$2y$10$Fs/PHZjoeBMyOJNEdGgm3Ocmy4aJM0MRKGhhrLpvu/JHuLfEp4GV2'
 WHERE password = '$2y$10$NbPB8zDOqqAfu.S0uvhkouO.YS1s8oP8se5ukqJx/J8ht2bnYA3ya';
-=======
+
 SET userRole = 88
 WHERE Username = 'Admin';
->>>>>>> Stashed changes
 
 DELETE FROM Users
 WHERE username = 'Admin';

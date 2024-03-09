@@ -44,10 +44,8 @@ Class Verify
         }
     }
 
-<<<<<<< Updated upstream
     // 
 
-=======
     // verifies user type
     public function userType(string $user, int $type) {
         // gets usertype
@@ -64,6 +62,5 @@ Class Verify
             return FALSE;
         }
     }
->>>>>>> Stashed changes
 }
 
