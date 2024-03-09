@@ -12,7 +12,7 @@ if (!$verify->userType($_SESSION['user'], 88)) {
 
 $db->query('SELECT UserId,Username
             FROM Users
-            WHERE userRole = 1;');
+            ORDER BY userRole DESC;');
 
 $result = $db->resultSet();
 

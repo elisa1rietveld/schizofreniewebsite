@@ -1,6 +1,14 @@
 <?php
 include_once 'Lib/database.php';
+include_once 'Lib/Verify.php';
+
 $db = new Database();
+$verify = new Verify();
+
+if ($verify->userType($_SESSION['user'], 88)) {
+    header('Refresh: 0, url=Admin.php');
+    exit;
+}
 
 $qMade = 0;
 $total = 0;
