@@ -5,10 +5,7 @@ CREATE TABLE Users (
 	UserId int NOT NULL AUTO_INCREMENT,
     Username varchar(128) UNIQUE NOT NULL,
     password varchar(128) NOT NULL,
-<<<<<<< Updated upstream
-=======
     userRole int, -- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
->>>>>>> Stashed changes
     PRIMARY KEY (userId)   
 );
 
@@ -34,6 +31,14 @@ INSERT INTO Questions(UserId,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10) VALUES (2,3,4,2,1,4
 INSERT INTO Questions(UserId,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9) VALUES (1,3,5,3,2,1,3,5,3,2);
 INSERT INTO Questions(UserId) VALUES (1);
 
+INSERT INTO Users (Username,password,userRole)
+VALUES
+  ("Owen Hoover","NGV07MNJ6LW",1),
+  ("Shoshana Curtis","JNS96FFP2WF",1),
+  ("Constance Kelly","RHU73YQW6PG",1),
+  ("Michael Crane","XEN71DIS3UB",1),
+  ("Ray Sharpe","CYV71KRB1VU",1);
+
 
 SELECT Users.UserId,Questions.Q1,Questions.Q2,Questions.Q3,Questions.Q4,Questions.Q5,Questions.Q6,Questions.Q7,Questions.Q8,Questions.Q9,Questions.Q10
 FROM Users
@@ -46,6 +51,7 @@ UPDATE Users
 SET password = '$2y$10$Fs/PHZjoeBMyOJNEdGgm3Ocmy4aJM0MRKGhhrLpvu/JHuLfEp4GV2'
 WHERE password = '$2y$10$NbPB8zDOqqAfu.S0uvhkouO.YS1s8oP8se5ukqJx/J8ht2bnYA3ya';
 
+UPDATE Users
 SET userRole = 88
 WHERE Username = 'Admin';
 

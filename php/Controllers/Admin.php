@@ -10,7 +10,7 @@ if (!$verify->userType($_SESSION['user'], 88)) {
     exit;
 } 
 
-$db->query('SELECT UserId,Username
+$db->query('SELECT UserId,Username, userRole
             FROM Users
             ORDER BY userRole DESC;');
 
@@ -18,9 +18,16 @@ $result = $db->resultSet();
 
 $tablerow = "";
 foreach ($result as $key => $object) {
+    if ($object->userRole == 88) {
+        $type = "Admin";
+    } else {
+        $type = "User";
+    }
     $tablerow .= "<tr>
                     <td>". $object->UserId . "</td>
                     <td>". $object->Username . "</td>
-                    <td>User</td>
+                    <td>". $type . "</td>
+                    <td><a href=''>Change</a></td>
+                    <td><a href=''>Delete</a></td>
                   </tr>";
 }

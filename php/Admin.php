@@ -20,14 +20,19 @@
         <div class="container">
             <section class='user-managing'>
                 <h2>Users</h2>
-                <table>
-            <tr>
-                <th>Id</th>
-                <th>Username</th>
-                <th>userType</th>
-            </tr>
-            <?php echo $tablerow;?>
-        </table>
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th>Id</th>
+                            <th>Username</th>
+                            <th>userType</th>
+                            <th>Change role</th>
+                            <th>Delete user</th>
+
+                        </tr>
+                        <?php echo $tablerow;?>
+                    </table>
+                </div>
     </section>
 
     <section class="manage">

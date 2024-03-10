@@ -23,6 +23,11 @@ body{
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition:  0.3s ease-in-out;
+
+    &:hover{
+        box-shadow: rgba(0, 0, 0, 0.07) 9px 18px 28px, rgba(0, 0, 0, 0.11) 7px 14px 14px;
+    }
 }
 
 h1 {
@@ -53,6 +58,8 @@ form{
     }
     #submit {
         font-size: 24px;
+        border-radius: 10px;
+        border: 2px rgba($black, 0.5) solid;
     }
     a {
         text-align: center;
