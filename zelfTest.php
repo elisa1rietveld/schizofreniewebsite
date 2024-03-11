@@ -11,7 +11,9 @@
 </head>
     <?php include_once 'php/header.php';?>
 <body>
-
+<a href="zelfTest2.php">
+    <button>Zelf test</button>
+</a>
     <script src="js/index.js"></script>
     
 </body>
