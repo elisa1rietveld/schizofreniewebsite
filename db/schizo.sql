@@ -17,11 +17,11 @@ Q2 int(1),
 Q3 int(1),
 Q4 int(1),
 Q5 int(1),
--- Q6 int(1),
--- Q7 int(1),
--- Q8 int(1),
--- Q9 int(1),
--- Q10 int(1),
+Q6 int(1),
+Q7 int(1),
+Q8 int(1),
+Q9 int(1),
+Q10 int(1),
 PRIMARY KEY(TestId),
 FOREIGN KEY(UserId) REFERENCES Users(UserId)
 );
@@ -33,17 +33,18 @@ INSERT INTO Questions(UserId) VALUES (1);
 
 INSERT INTO Users (Username,password,userRole)
 VALUES
-  ("Owen Hoover","NGV07MNJ6LW",1),
-  ("Shoshana Curtis","JNS96FFP2WF",1),
-  ("Constance Kelly","RHU73YQW6PG",1),
-  ("Michael Crane","XEN71DIS3UB",1),
-  ("Ray Sharpe","CYV71KRB1VU",1);
+  ("Gay Benson","IUO67LMF8ID",88),
+  ("Kay Peterson","RWO83TFC2LW",88),
+  ("Keelie Barnes","RQY26BRF7MM",88),
+  ("Basil Waters","ZRZ48OBK8VX",88),
+  ("Chiquita Torres","VEU44ILG1QB",88);
 
 
-SELECT Users.UserId,Questions.Q1,Questions.Q2,Questions.Q3,Questions.Q4,Questions.Q5,Questions.Q6,Questions.Q7,Questions.Q8,Questions.Q9,Questions.Q10
+SELECT Users.username,Users.UserId,Questions.Q1,Questions.Q2,Questions.Q3,Questions.Q4,Questions.Q5,Questions.Q6,Questions.Q7,Questions.Q8,Questions.Q9,Questions.Q10
 FROM Users
 RIGHT JOIN Questions
-ON Questions.UserId = Users.UserId;
+ON Questions.UserId = Users.UserId
+WHERE Users.username = "Admin";
 
 select * from Users;
 
@@ -54,6 +55,12 @@ WHERE password = '$2y$10$NbPB8zDOqqAfu.S0uvhkouO.YS1s8oP8se5ukqJx/J8ht2bnYA3ya';
 UPDATE Users
 SET userRole = 88
 WHERE Username = 'Admin';
+
+UPDATE Questions AS Q
+LEFT JOIN Users as U
+ON Q.UserId = U.UserId
+SET Q.Q1 = 0
+WHERE U.username = "Admin";
 
 DELETE FROM Users
 WHERE username = 'Admin';

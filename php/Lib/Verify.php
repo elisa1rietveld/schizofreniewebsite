@@ -62,5 +62,30 @@ Class Verify
             return FALSE;
         }
     }
+
+    public function Question($userName, $Qnum){
+        // makes it 'Q1' as example
+        $question = 'Q' . $Qnum;
+        // selects all questions from the user.
+        $this->db->query('SELECT Users.username,Users.UserId,Questions.Q1,Questions.Q2,Questions.Q3,Questions.Q4,Questions.Q5,Questions.Q6,Questions.Q7,Questions.Q8,Questions.Q9,Questions.Q10
+                          FROM Users
+                          RIGHT JOIN Questions
+                          ON Questions.UserId = Users.UserId
+                          WHERE Users.username = :user;');
+        $this->db->bind(':user',$userName);
+        $result = $this->db->single();
+
+        // if the question has had an anwser, return true.
+        if(isset($result->$question)) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+
+
+    public function from($user) { //verifies if there's a form connected to this account
+
+    }
 }
 

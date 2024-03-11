@@ -3,18 +3,8 @@ session_start();
 ?>
 
 <?php
-$qMade = 0;
-if(isset($_POST['Q1'])) {
-    $qMade = 1;
-} elseif (isset($_POST['Q2'])) {
-    $qMade = 2;
-} elseif (isset($_POST['Q3'])) {
-  $qMade = 3;
-} elseif (isset($_POST['Q4'])) {
-  $qMade = 4;
-}elseif (isset($_POST['Q5'])) {
-  $qMade = 5;
-}
+// I made a controller for this shit, AKA the code part will be in a seperate file
+require_once 'php/zelfTest2.php';
 ?>
 
 <!DOCTYPE html>
