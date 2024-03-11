@@ -2,7 +2,6 @@
 
 <?php
 $qMade = 0;
-var_dump($_POST);
 if(isset($_POST['Q1'])) {
     $qMade = 1;
 } elseif (isset($_POST['Q2'])) {
@@ -16,44 +15,6 @@ if(isset($_POST['Q1'])) {
 }
 ?>
 
-
-    <?php if($qMade == 0): ?>
-        <p>Waarneemt u hallicunaties?</p>
-        <form action="zelfTest2.php" method="post">
-        <input type="radio" name="Q1" value="0">Ja
-        <input type="radio" name="Q1" value="5">Nee
-        <button type="submit">next question</button>
-        </form>
-    <?php elseif ($qMade == 1): ?>
-        <p>Heeft u waanbeelden?</p>
-        <form action="zelfTest2.php" method="post">
-        <input type="radio" name="Q2" value="0">Ja
-        <input type="radio" name="Q2" value="5">Nee
-        <button type="submit">next question</button>
-        </form>
-    <?php elseif ($qMade == 2): ?>
-        <p>Heeft u problemen met begrijpen en uiten van uw emoties?</p>
-        <form action="zelfTest2.php" method="post">
-        <input type="radio" name="Q3" value="0">Ja
-        <input type="radio" name="Q3" value="5">Nee
-        <button type="submit">next question</button>
-        </form>
-    <?php elseif ($qMade == 3): ?>
-        <p>Komt psychose of schizofrenie eerder voor in de familie? </p>
-        <form action="zelfTest2.php" method="post">
-        <input type="radio" name="Q4" value="0">Ja
-        <input type="radio" name="Q4" value="5">Nee
-        <button type="submit">next question</button>
-        </form>
-    <?php elseif ($qMade == 4): ?>
-        <p>Heeft u moeite met echt en nep te onderscheiden? </p>
-        <form action="zelfTest2.php" method="post">
-        <input type="radio" name="Q5" value="0">Ja
-        <input type="radio" name="Q5" value="5">Nee
-        <button type="submit">next question</button>
-        </form>
-    <?php endif; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,8 +26,48 @@ if(isset($_POST['Q1'])) {
     <title>Simple Self Test</title>
     <link rel="stylesheet" href="css/zelfTest.css">
 </head>
+<body background="img/Index1.png">
+<div class="container">
 
-<body>
+  <div class="cell">
+    <?php if($qMade == 0): ?>
+      <p><strong>Waarneemt u hallicunaties?</strong></p>
+      <form action="zelfTest2.php" method="post">
+        <input type="radio" name="Q1" value="0">Ja 
+        <input type="radio" name="Q1" value="5">Nee 
+        <button type="submit">next question</button>
+      </form>
+      <?php elseif ($qMade == 1): ?>
+        <p><strong>Heeft u waanbeelden?</strong></p>
+        <form action="zelfTest2.php" method="post">
+          <input type="radio" name="Q2" value="0">Ja
+        <input type="radio" name="Q2" value="5">Nee
+        <button type="submit">next question</button>
+      </form>
+      <?php elseif ($qMade == 2): ?>
+        <p><strong>Heeft u problemen met begrijpen en uiten van uw emoties?</strong></p>
+        <form action="zelfTest2.php" method="post">
+          <input type="radio" name="Q3" value="0">Ja
+          <input type="radio" name="Q3" value="5">Nee
+          <button type="submit">next question</button>
+        </form>
+        <?php elseif ($qMade == 3): ?>
+          <p><strong>Komt psychose of schizofrenie eerder voor in de familie? </strong></p>
+          <form action="zelfTest2.php" method="post">
+            <input type="radio" name="Q4" value="0">Ja
+            <input type="radio" name="Q4" value="5">Nee
+            <button type="submit">next question</button>
+          </form>
+        <?php elseif ($qMade == 4): ?>
+            <p><strong>Heeft u moeite met echt en nep te onderscheiden? </strong></p>
+            <form action="zelfTest2.php" method="post">
+              <input type="radio" name="Q5" value="0">Ja
+              <input type="radio" name="Q5" value="5">Nee
+              <button type="submit">next question</button>
+            </form>
+            <?php endif; ?>
+    </div>
+  </div>
 
 <script src="js/index.js"></script>
 <script src="js/test.js"></script>

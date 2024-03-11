@@ -3,5 +3,37 @@
 
 body {
     font-family: mulish;
-    background-color: rgb(238, 234, 235);
+}
+
+.cell {
+    background-color: white;
+    padding: 10%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell2 {
+    background-color: white;
+    padding: 10%;
+
+    button {
+        border-color:  #D7D4D4;
+        background-color:  #D7D4D4; 
+        transition: background-color 0.3s ease; 
+
+    }
+
+    button:hover {
+        background-color: #acacac; 
+     }
 }
