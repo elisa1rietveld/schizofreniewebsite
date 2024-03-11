@@ -36,8 +36,11 @@ if(isset($result->Q1)){
     }
 }
 
-// There is a total of 50 points, but we're working on a 0 to 100%. So I multiply.
-$num = $total * 2;
+// There is a total of 25 points, but we're working on a 0 to 100%. So I multiply times 4.
+$num = $total * 4;
+
+$qMade = 0;
+$num =  0;
 
 
 $round = 816.81408993334624200028727965267;

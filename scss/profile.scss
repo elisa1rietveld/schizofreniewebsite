@@ -88,8 +88,6 @@ section {
     }
 }
 
-
-
 .result {
     width: 100%;
 
@@ -138,10 +136,11 @@ section {
 .test-button{
     background-color: $blue;
     color: $white;
-    border: 5px $blue solid;
-    padding: 1rem;
-    border-radius: 50px;
+    border: 4px $blue solid;
+    padding: 0.5rem;
+    border-radius: 20px;
     transition: all 0.3s ease-in-out;
+    text-decoration: none;
     &:hover{
         background-color: $white;
         color: $blue;
