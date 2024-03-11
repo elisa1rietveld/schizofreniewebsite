@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    // var_dump($_SESSION);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +20,7 @@
   <div class="my-box1">
     <h1>Schizofrenie</h1>
     <p>Schizofrenie is een complexe psychiatrische aandoening die gekenmerkt wordt door verstoringen in het denken, de emoties en het gedrag van een individu. Voor uitgebreide informatie, ondersteunende hulpbronnen en zelfevaluatiemogelijkheden, wordt verwezen naar deze website.
-        <button onclick="location.href='info.html'">Read More</button>
+        <button onclick="location.href='info.php'">Read More</button>
     </p>
   </div>
   <script src="js/index.js"></script>

@@ -1,0 +1,148 @@
+@use 'base';
+@use 'navbar';
+@import 'config';
+
+
+body,
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    // background-color: rgba($pBlue, 0.7);
+    background-color: rgba($dBlue,0.7);     
+    // background-image: url('../img/Index1.png');
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Poppins';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+main {
+    padding: 0 10rem;
+}
+
+// default section makeup
+section {
+    padding: 2rem;
+    background: $white;
+    // dit moet anders kunnen maar ik weet niet hoe. Later even aan jesse vragen
+    width: 49%;
+    margin: 0.45rem;
+    border-radius: 1rem;
+    box-shadow: 2px 5px 1px darken($white, 15);
+
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        text-align: center;
+        font-size: 48px;
+        font-family: 'Poppins';
+        margin: 0.5rem;
+    }
+
+    * {
+        font-size: 32px;
+    }
+
+    a {
+        margin: 0.5rem 0;
+        font-style: normal;
+        color: $blue;
+    }
+
+
+}
+
+.manage {
+
+    p {
+        margin: 0.5rem 0;
+    }
+    a{
+        width: fit-content;
+    }
+}
+
+.test {
+
+    p,
+    a {
+        text-align: center;
+    }
+}
+
+.result {
+    width: 100%;
+
+    .results {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        // svg bullshit
+        svg {
+            circle.fg {
+                transform: rotate(-90deg);
+                transform-origin: 150px 150px;
+
+            }
+        }
+    }
+
+    .box {
+        max-width: 910px;
+    }
+}
+
+#progress {
+    position: relative;
+    bottom: 50px;
+}
+
+.contact {
+    // width: 100%;
+
+    p,
+    a {
+        padding: 0;
+        margin: 0;
+        width: fit-content;
+        height: fit-content;
+    }
+}
+
+
+.ai-center{
+    align-items: center;
+}
+
+.test-button{
+    background-color: $blue;
+    color: $white;
+    border: 4px $blue solid;
+    padding: 0.5rem;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    &:hover{
+        background-color: $white;
+        color: $blue;
+    }
+}

@@ -1,4 +1,6 @@
-<?php include_once 'php/header.php';?>
+<?php include_once 'php/header.php'
+session_start();
+;?>
 
 <?php
 $qMade = 0;
