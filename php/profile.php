@@ -44,7 +44,7 @@
                     <a href="" class="test-button">Verder met de test</a>
                 <?php else: ?>
                     <p>Je hebt de test nog niet gedaan, wil je hem maken?</p>
-                    <a href="" class="test-button">Maak de test</a>
+                    <a href="/zelfTest2.php" class="test-button">Maak de test</a>
                 <?php endif; ?>
             </section>
 
