@@ -13,16 +13,22 @@ session_start();
     <title>Document</title>
 </head>
     <?php include_once 'php/header.php';?>
-<body>
+<body background="img/Index1.png">
     <!-- Dit stukje code zorgt ervoor dat het alleen werkt als je ingelogd ben. Haal het weg als je eraan gaat werken -Zico-->
     <?php if (!isset($_SESSION['user'])) {
-    header('refresh: 0, url=/php/login.php');
+    // header('refresh: 0, url=/php/login.php');
     }?> 
 
-
+<div class="container2">
+<div class="cell2">
+<p>Benieuwd of u tekenen vertoont die kunnen wijzen op schizofrenie? <br>
+Doe deze test om erachter te komen. </p>
 <a href="zelfTest2.php">
     <button>Zelf test</button>
 </a>
+</div>
+</div>
+
     <script src="js/index.js"></script>
     
 </body>
