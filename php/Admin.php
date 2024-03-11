@@ -39,7 +39,9 @@
         <h2>Account</h2>
         <p>Gebruikersnaam: <?php echo $_SESSION['user']?></p>
         <p>Password: ***********</p>
+        <a href="change.php">Change password</a>
     </section>
+    
         </div>
     </main>
 

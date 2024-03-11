@@ -2,7 +2,7 @@
         <nav>
             <span class="sidenav" id="mySideNav">
                 <ul>
-                    <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+                    <a href="javascript:void(0)" class="closebtn" onclick="navWidth()">&times;</a>
                     <li><a href="/index.php">Home</a></li>
                     <li><a href="/info.php">Informatie</a></li>
                     <li><a href="/contact.php">Contact</a></li>
@@ -13,7 +13,7 @@
         </nav>
         
         <div class="banner">
-            <span class="hamburger sides" onclick="openNav()">
+            <span class="hamburger sides" onclick="navWidth()">
                 <div></div>
                 <div></div>
                 <div></div>

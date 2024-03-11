@@ -34,7 +34,7 @@
                 <a href="Controllers/delete.php">Delete account</a>
             </section>
 
-            <section class="test">
+            <section class="test ai-center">
                 <h2>Selftest</h2>
                 <?php if ($qMade == 10): ?>
                     <p>Je hebt de test gemaakt! Wil je hem opnieuw doen?</p>
@@ -44,11 +44,11 @@
                     <a href="">Verder met de test</a>
                 <?php else: ?>
                     <p>Je hebt de test nog niet gedaan, wil je hem maken?</p>
-                    <a href="">Maak de test</a>
+                    <a href="" class="test-button">Maak de test</a>
                 <?php endif; ?>
             </section>
 
-            <section class="result">
+            <section class="result ai-center">
                 <h2>Result</h2>
                 <div class="results">
                     <!-- What i'm trying to do is make a progress circle. We currently only have the circle -->
