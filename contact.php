@@ -13,6 +13,7 @@ session_start();
     <link rel="stylesheet" href="css/contact.css">
     <title>Contact</title>
     </head>
+    
     <body background="img/Index1.png">
     <?php include_once 'php/header.php';?>
     <h1 class="content">Contact</h1>
@@ -20,7 +21,7 @@ session_start();
     <div class="parent">
      <div class="container ">
          <img src="img/phone-call.png" alt="Phone Call" id="phone" class="pic" >
-         <h1>Hulplijnen</h1>
+         <h2>Hulplijnen</h2>
          <div class="contact-info">
              <p>H B Hulplijnen:</p>
             <a href="tel:0880767000">088 0767 000</a>
@@ -38,7 +39,7 @@ session_start();
 
         <div class="container">
             <img src="img/user.png" alt="user" class="pic">
-            <h1>Contact</h1>
+            <h3>Contact</h3>
             <!-- <div class="container"> -->
             <div class="contact-info">
                     <p>Contact:</p>
