@@ -8,3 +8,69 @@ body,html{
  main {
    background-color: rgb(238, 234, 235);
  }
+
+ .container {
+  position: relative;
+  padding: 2rem 0;
+  background-color: rgb(254, 254, 254);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ }
+
+ .FAQitem {
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  width: 200px;
+  height: 320px;
+  text-align: justify;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.5s;
+  left: calc(50% - 110px);
+  top: 0;
+  background-color: rgba($color: rgb(229, 228, 228), $alpha: 1);
+  margin: 1rem;
+  p{
+    font-size: 1rem;
+  }
+}
+  h1 {
+    text-align: center;
+    font-size: 5rem;
+    margin: 0;
+    color: black;
+  }
+
+  .FAQcontainer {
+    position: relative;
+    width: 100%;
+    height: 370px;
+    overflow: hidden;
+    background-color: rgba($color: rgb(255, 255, 255), $alpha: 0.7);}
+    
+
+    #next, #prev{
+    position: absolute;
+    top: 40%;
+    color: rgb(21, 21, 21);
+    background-color: transparent;
+    border: none;
+    font-size: xx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 350px;
+    z-index: 4;
+      }
+  
+      #next{
+        left:unset;
+        right: 300px;
+      }
+
+    
+        
+    

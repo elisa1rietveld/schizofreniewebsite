@@ -26,9 +26,9 @@
             <div class="sides">
                 <?php if (isset($_SESSION['user'])) : ?>
                     <p>Welkom <?php echo $_SESSION['user'] ?></p>
-                    <a href="/php/Controllers/logout.php">Log uit?</a>
+                    <a href="http://www.schizo.com/php/logout.php">Log uit?</a>
                 <?php else : ?>
-                    <a href="/php/login.php">Log In!</a> 
+                    <a href="http://www.schizo.com/php/login.php">Log In!</a> 
                 <?php endif;?>
             </div>
         </div>
