@@ -18,23 +18,23 @@ session_start();
                     <div class="FAQcontainer">
 
                         <div class="FAQitem">
-                            <p>Is schizofrenie hetzelfde als psychoze? <br><br><br> <em>"Schizofrenie is de diagnose die iemand krijgt als hij minimaal een maand psychosen heeft (gehad). En daar nog minstens een half jaar (rest)klachten door heeft."</em></p>
+                            <p><strong>Is schizofrenie hetzelfde als psychoze?</strong> <br><br><br> <em>"Schizofrenie is de diagnose die iemand krijgt als hij minimaal een maand psychosen heeft (gehad). En daar nog minstens een half jaar (rest)klachten door heeft."</em></p>
                         </div>
 
                         <div class="FAQitem">
-                            <p>Hoe vaak komt schizofrenie voor in Nederland? <br><br><br> <em>"In 2021 stonden 50.400 mensen bij de huisarts geregistreerd met schizofrenie, 33.000 mannen en 17.400 vrouwen."</em></p>
+                            <p><strong>Hoe vaak komt schizofrenie voor in Nederland?</strong> <br><br><br> <em>"In 2021 stonden 50.400 mensen bij de huisarts geregistreerd met schizofrenie, 33.000 mannen en 17.400 vrouwen."</em></p>
                         </div>
 
                         <div class="FAQitem">
-                            <p>Wat is schizofrenie?  <br><br><br> <em>"Schizofrenie, soms ook wel 'psychose gevoeligheids syndroom' genoemd, valt onder de psychotische stoornissen."</em></p>
+                            <p><strong>Wat is schizofrenie?</strong>  <br><br><br> <em>"Schizofrenie, soms ook wel 'psychose gevoeligheids syndroom' genoemd, valt onder de psychotische stoornissen."</em></p>
                         </div>
 
                         <div class="FAQitem">
-                            <p>Hoe wordt een diagnose gesteld? <br><br><br> <em>"Door middel van het psychiatrisch onderzoek stelt de psychiater de psychiatrische symptomen vast. Er wordt gekeken of en zo ja welke psychiatrische symptomen er zijn."</em></p>
+                            <p><strong>Hoe wordt een diagnose gesteld?</strong> <br><br><br> <em>"Door middel van het psychiatrisch onderzoek stelt de psychiater de psychiatrische symptomen vast. Er wordt gekeken of en zo ja welke psychiatrische symptomen er zijn."</em></p>
                         </div>
 
                         <div class="FAQitem">
-                            <p>Wat is de behandeling voor schizofrenie? <br><br><br> <em>"Een bepaald soort medicijnen, antipsychotica genoemd, speelt een belangrijke rol in de behandeling van schizofrenie."</em></p>
+                            <p><strong>Wat is de behandeling voor schizofrenie?</strong> <br><br><br> <em>"Een bepaald soort medicijnen, antipsychotica genoemd, speelt een belangrijke rol in de behandeling van schizofrenie."</em></p>
                         </div>
 
                         <button id="next">></button>
