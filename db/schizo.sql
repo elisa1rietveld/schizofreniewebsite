@@ -43,7 +43,7 @@ VALUES
   ("Chiquita Torres","VEU44ILG1QB",88);
 
 
-SELECT Users.username,Users.UserId,Questions.Q1,Questions.Q2,Questions.Q3,Questions.Q4,Questions.Q5,Questions.Q6,Questions.Q7,Questions.Q8,Questions.Q9,Questions.Q10
+SELECT Users.username,Users.UserId,Questions.Q1,Questions.Q2,Questions.Q3,Questions.Q4,Questions.Q5 -- ,Questions.Q6,Questions.Q7,Questions.Q8,Questions.Q9,Questions.Q10
 FROM Users
 RIGHT JOIN Questions
 ON Questions.UserId = Users.UserId
