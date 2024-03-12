@@ -15,7 +15,7 @@ $total = 0;
 
 // Returns all the Questions Anwsered. 
 // Current problem: Need to remove the old Record if we're redoing the test!!!!!
-$db->Query('SELECT Questions.Q1,Questions.Q2,Questions.Q3,Questions.Q4,Questions.Q5,Questions.Q6,Questions.Q7,Questions.Q8,Questions.Q9,Questions.Q10
+$db->Query('SELECT Questions.Q1,Questions.Q2,Questions.Q3,Questions.Q4,Questions.Q5
             FROM Users
             RIGHT JOIN Questions
             ON Questions.UserId = Users.UserId;
