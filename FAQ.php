@@ -30,7 +30,7 @@ session_start();
                         </div>
 
                         <div class="FAQitem">
-                            <p><strong>Hoe wordt een diagnose gesteld?</strong> <br><br><br> <em>"Door middel van het psychiatrisch onderzoek stelt de psychiater de psychiatrische symptomen vast. Er wordt gekeken of en zo ja welke psychiatrische symptomen er zijn."</em></p>
+                            <p><strong>Hoe wordt een diagnose gesteld?</strong> <br><br> <em>"Door middel van het psychiatrisch onderzoek stelt de psychiater de psychiatrische symptomen vast. Er wordt gekeken of en zo ja welke psychiatrische symptomen er zijn."</em></p>
                         </div>
 
                         <div class="FAQitem">
