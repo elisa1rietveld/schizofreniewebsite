@@ -3,12 +3,11 @@
 
 body {
     font-family: mulish;
-    margin: 0;
 }
 
 .parent {
   display: flex;
-  gap: 15rem; 
+  gap: 10rem; 
   margin-left: 12rem;
   width: auto;
 }
@@ -38,7 +37,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 16px;
     font-size: 0.8em;
   }
   
@@ -67,10 +65,6 @@ body {
       margin-bottom: 16px;
     }
   
-    p {
-      margin-bottom: 8px;
-    }
-  
     .contact-info {
       display: flex;
       flex-direction: column;
@@ -86,11 +80,6 @@ body {
         text-decoration: underline;
       }
     }
-  
-    .address {
-      margin-top: 16px;
-      font-style: italic;
-    }
   }
 
   main {
@@ -101,7 +90,6 @@ body {
   .content {
     background-color: #ffffff;
     padding: 10px;
-    border-radius: solid;
     width: 20%;
     text-align: center;
  }

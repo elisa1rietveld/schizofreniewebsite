@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +25,7 @@
                 Het begrijpen van schizofrenie vereist een holistische benadering die rekening houdt met de complexiteit van de aandoening en de unieke behoeften van elk individu. Vroege detectie, gepersonaliseerde behandeling en continue ondersteuning zijn essentieel voor het beheersen van de symptomen en het bevorderen van het welzijn en de veerkracht van mensen met schizofrenie en hun families.
             </p>                       
 
-            <a href="zelfTest.html">
+            <a href="zelfTest.php">
                 <button>Zelf test</button>
             </a>
 
