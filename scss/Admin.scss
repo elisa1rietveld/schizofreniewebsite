@@ -23,7 +23,7 @@ table,tr,th,td{
 
 tr{
     &:nth-child(even) {
-        background-color: rgba($pBlue,0.25);
+        background-color: rgba($dBlue,0.5);
     }
     &:nth-child(1) {
         position: sticky;
