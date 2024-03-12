@@ -19,7 +19,7 @@ session_start();
     <main>
     <div class="parent">
      <div class="container ">
-         <img src="img/phone-call.png" alt="Phone Call" id="phone" >
+         <img src="img/phone-call.png" alt="Phone Call" id="phone" class="pic" >
          <h1>Hulplijnen</h1>
          <div class="contact-info">
              <p>H B Hulplijnen:</p>
@@ -37,7 +37,7 @@ session_start();
         
 
         <div class="container">
-            <img src="img/user.png" alt="user">
+            <img src="img/user.png" alt="user" class="pic">
             <h1>Contact</h1>
             <!-- <div class="container"> -->
             <div class="contact-info">
