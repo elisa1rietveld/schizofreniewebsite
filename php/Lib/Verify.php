@@ -8,20 +8,6 @@ Class Verify
         $this->db = new Database();
     }
 
-    public function getId($user) {
-        $this->db->query('SELECT userId
-                          FROM USERS
-                          WHERE userName = :user;');
-        $this->db->bind(':user',$user);
-        $result = $this->db->single();
-
-        if(isset($result->userId)){
-            return intval($result->userId);
-        } else {
-            return FALSE;
-        }
-    }
-
     // verifies password
     public function Pass($user,$pass) {
         
@@ -78,59 +64,17 @@ Class Verify
         }
     }
 
-    public function Question($userId, $Qnum){
-        // makes it 'Q1' as example
-        $question = 'Q' . $Qnum;
-        // selects all questions from the user.
-        $this->db->query('SELECT UserId,Q1,Q2,Q3,Q4,Q5
-                          FROM questions
-                          WHERE UserId = :user');
-
-        $this->db->bind(':user',$userId);
+    public function getId($user) {
+        $this->db->query('SELECT userId
+                          FROM USERS
+                          WHERE userName = :user;');
+        $this->db->bind(':user',$user);
         $result = $this->db->single();
 
-        // if the question has had an anwser, return true.
-        if(isset($result->$question)) {
-            return TRUE;
+        if(isset($result->userId)){
+            return intval($result->userId);
         } else {
             return FALSE;
         }
     }
-
-
-    public function form($user) { //verifies if there's a form connected to this account
-            $id = $this->getId($user);
-            $this->db->query('SELECT TestId, UserId
-                              FROM Questions
-                              WHERE UserId = :user');
-            $this->db->bind(':user', $id);
-            $result = $this->db->single();
-
-            if (isset($result->TestId)) {
-                return TRUE;
-            } else {
-                return FALSE;
-            }
-    }
-
-    public function Qmade($user) {
-        $Qmade = 0;
-        $id = $this->getId($user);
-        $this->db->query('SELECT Q1,Q2,Q3,Q4,Q5
-                          FROM questions
-                          WHERE UserId = :user');
-        $this->db->bind(':user', $id);
-        $result = $this->db->single();
-        
-        // adds 1 for each question made
-        foreach($result as $question => $value) {
-            if(isset($value)) {
-                $Qmade++;
-            } else {
-                $Qmade += 0;
-            }
-        }
-        return $Qmade;
-    }
 }
-

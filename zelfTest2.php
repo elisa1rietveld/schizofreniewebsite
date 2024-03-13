@@ -17,8 +17,8 @@ require_once 'php/zelfTest2.php';
     <link rel="stylesheet" href="css/zelfTest.css">
   </head>
   <?php
-  include_once 'php/header.php'
-  ;?>
+  include_once 'php/header.php';
+  ?>
 <body background="img/Index1.png">
 <div class="container">
 
