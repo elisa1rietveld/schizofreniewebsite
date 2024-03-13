@@ -26,9 +26,10 @@
             <div class="sides">
                 <?php if (isset($_SESSION['user'])) : ?>
                     <p>Welkom <?php echo $_SESSION['user'] ?></p>
-                    <a href="http://www.schizo.com/php/logout.php">Log uit?</a>
+                    <a href="/php/logout.php">Log uit?</a>
                 <?php else : ?>
-                    <a href="http://www.schizo.com/php/login.php">Log In!</a> 
+                    <a href="/php/login.php">Log In!</a>  
+                    <!-- change aref later -->
                 <?php endif;?>
             </div>
         </div>

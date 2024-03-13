@@ -21,7 +21,7 @@ if (!isset($_SESSION['user'])) :
 <p>Benieuwd of u tekenen vertoont die kunnen wijzen op schizofrenie? <br>
 Doe deze test om erachter te komen. </p>
 <a href="zelfTest2.php">
-    <button>Zelf test</button>
+    <button>Start de test</button>
 </a>
 </div>
 </div>

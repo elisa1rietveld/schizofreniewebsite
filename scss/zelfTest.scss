@@ -22,18 +22,26 @@ body {
     align-items: center;
 }
 
+//zelftest begin pagina
+
 .cell2 {
     background-color: white;
+    border-radius: 5px;
     padding: 10%;
+    margin-top: 2rem;
 
     button {
-        border-color:  #D7D4D4;
-        background-color:  #D7D4D4; 
+        border-color:  #d4d4d7;
+        border-radius: 5px;
+        background-color:  #d4d4d7; 
         transition: background-color 0.3s ease; 
-
+        width: 15rem;
+        height: 5rem;
+        margin-top: 5px;
     }
 
     button:hover {
         background-color: #acacac; 
+        border-color: #acacac; 
      }
 }
