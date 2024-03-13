@@ -15,10 +15,10 @@ $total = 0;
 
 // Returns all the Questions Anwsered. 
 // Current problem: Need to remove the old Record if we're redoing the test!!!!!
-$db->Query('SELECT Questions.Q1,Questions.Q2,Questions.Q3,Questions.Q4,Questions.Q5
-            FROM QUESTIONS
-            WHERE UserId = :user');
-$db->bind(':user', $verify->getId($_SESSION['user']));
+$db->Query('SELECT Q1,Q2,Q3,Q4,Q5
+            FROM Questions
+            WHERE UserId = :userId');
+$db->bind(':userId',$verify->getId($_SESSION['user']));
 $result = $db->single();
 
 // checks how many questions have been made and the total value of them

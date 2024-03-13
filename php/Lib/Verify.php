@@ -82,7 +82,7 @@ Class Verify
         // makes it 'Q1' as example
         $question = 'Q' . $Qnum;
         // selects all questions from the user.
-        $this->db->query('SELECT UserId,Questions.Q1,Questions.Q2,Questions.Q3,Questions.Q4,Questions.Q5
+        $this->db->query('SELECT UserId,Q1,Q2,Q3,Q4,Q5
                           FROM questions
                           WHERE UserId = :user');
 
@@ -99,12 +99,12 @@ Class Verify
 
 
     public function form($user) { //verifies if there's a form connected to this account
+            $id = $this->getId($user);
             $this->db->query('SELECT TestId, UserId
-                             FROM Questions
-                             WHERE UserId = :usr');
-            $this->db->bind(':usr', $this->getId($user));
+                              FROM Questions
+                              WHERE UserId = :user');
+            $this->db->bind(':user', $id);
             $result = $this->db->single();
-            var_dump($result);
 
             if (isset($result->TestId)) {
                 return TRUE;
@@ -115,17 +115,16 @@ Class Verify
 
     public function Qmade($user) {
         $Qmade = 0;
-
-
-        $this->db->query('SELECT UserId,Questions.Q1,Questions.Q2,Questions.Q3,Questions.Q4,Questions.Q5
+        $id = $this->getId($user);
+        $this->db->query('SELECT Q1,Q2,Q3,Q4,Q5
                           FROM questions
                           WHERE UserId = :user');
-        $this->db->bind(':user', $this->getId($user));
+        $this->db->bind(':user', $id);
         $result = $this->db->single();
         
         // adds 1 for each question made
         foreach($result as $question => $value) {
-            if(isset($key)) {
+            if(isset($value)) {
                 $Qmade++;
             } else {
                 $Qmade += 0;

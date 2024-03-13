@@ -27,20 +27,24 @@ function setQ($user,$Qnum, $value) {
       return FALSE;
     }
 }
-              
-              
-// Qmade needs to be based on questions made. This will be done through the form function. Need to add later.
-if($verify->form($_SESSION['user'])) {
-  $Qmade = $verify->Qmade($_SESSION['user']);
 
-} 
-              
+$qMade= 0;
 // A brureforce way to check if the questions is anwsered it will increase the $Qmade and update database. Making it go to the next question.
-if (isset($_POST['Q' . strval($qMade + 1)])) {
-  echo 'yes';
-  $qMade++;
-  setQ($_SESSION['user'], $qMade, $_POST['Q' . ($qMade + 1)]);
+
+// sets qmade to the amount of questions made
+if($verify->form($_SESSION['user'])) {
+  $qMade = $verify->Qmade($_SESSION['user']);
+} else{
+  echo 'nO';
 }
+$question = 'Q' . strval($qMade + 1);
+
+if (isset($_POST[$question])) {
+  $qMade ++;
+  setQ($_SESSION['user'], $qMade, $_POST[$question]);
+  //reset the amount after you made it?
+}
+
 // } elseif (isset($_POST['Q2'])) {
 //   $qMade = 2;
 //   setQ($_SESSION['user'], $qMade, $_POST['Q2']);

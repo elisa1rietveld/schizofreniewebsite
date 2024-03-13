@@ -63,7 +63,7 @@
                     </svg>
                     <div class="box">
                         
-                        <?php if ($qMade == 5 && $num > 0) : ?>
+                        <?php if ($qMade == 5) : ?>
                             <h3>What I do now?</h3>
                             <p>If you have a 60% chance or higher we recommend you looking help from a professional, our test is just to give a direction
                                And is not made to perfectly predict your situation.
