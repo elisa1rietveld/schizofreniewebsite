@@ -14,33 +14,16 @@ $qMade= 0;
 // A brureforce way to check if the questions is anwsered it will increase the $Qmade and update database. Making it go to the next question.
 
 // sets qmade to the amount of questions made
-if($forms->form($_SESSION['user'])) {
-  $qMade = $forms->Qmade($_SESSION['user']);
+if($forms->form()) {
+  $qMade = $forms->Qmade();
 } else{
-  echo 'nO';
+  $forms->create();
 }
-$question = 'Q' . strval($qMade + 1);
+$question = 'Q' . strval($qMade + 1); //give it to setQuetion
 
 if (isset($_POST[$question])) {
   $qMade ++;
-  $forms->setQ($_SESSION['user'], $qMade, $_POST[$question]);
+  $forms->setQuestion($qMade, $_POST[$question]);
   //reset the amount after you made it?
 }
-
-// } elseif (isset($_POST['Q2'])) {
-//   $qMade = 2;
-//   setQ($_SESSION['user'], $qMade, $_POST['Q2']);
-
-// } elseif (isset($_POST['Q3'])) {
-//   $qMade = 3;
-//   setQ($_SESSION['user'], $qMade, $_POST['Q3']);
-
-// } elseif (isset($_POST['Q4'])) {
-//   $qMade = 4;
-//   setQ($_SESSION['user'], $qMade, $_POST['Q4']);
-
-// } elseif (isset($_POST['Q5'])) {
-//   $qMade = 5;
-//   setQ($_SESSION['user'], $qMade, $_POST['Q5']);
-// }
 

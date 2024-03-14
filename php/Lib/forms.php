@@ -34,8 +34,9 @@ class form
     }
 
 
-    public function form($user) { //verifies if there's a form connected to this account
-            $id = $this->verify->getId($user);
+    public function form() { //verifies if there's a form connected to this account
+            $id = $this->verify->getId($_SESSION['user']);
+            echo $id;
             $this->db->query('SELECT TestId, UserId
                               FROM Questions
                               WHERE UserId = :user');
@@ -49,9 +50,9 @@ class form
             }
     }
 
-    public function Qmade($user) {
+    public function Qmade() {
         $Qmade = 0;
-        $id = $this->verify->getId($user);
+        $id = $this->verify->getId($_SESSION['user']);
         $this->db->query('SELECT Q1,Q2,Q3,Q4,Q5
                           FROM questions
                           WHERE UserId = :user');
@@ -69,22 +70,47 @@ class form
         return $Qmade;
     }
 
-    function setQ($user,$Qnum, $value) {      
-          $Q = 'Q' . strval($Qnum);
+    public function setQuestion($Qnum, $value) {      
+          $q = 'Q' . strval($Qnum);
           
           $this->db->query("UPDATE questions
-                      SET ". $Q ." = :val
-                      WHERE UserId = :usr;");
+                            SET ". $q ." = :val
+                            WHERE UserId = :usr;");
                       
-          // $db->bind(':num');
           $this->db->bind(':val', intval($value));
-          $this->db->bind(':usr', intval($verify->getId($user)));
+          $this->db->bind(':usr', intval($this->verify->getId($_SESSION['user'])));
           $this->db->execute();
                       
-          if($this->verify->Question($user,$Qnum)) {
+          if($this->Question($this->verify->getId($_SESSION['user']),$Qnum)) {
             return TRUE;
           } else {
             return FALSE;
           }
+      }
+
+      public function remove() {
+        $id = $this->verify->getId($_SESSION['user']);
+        $this->db->query('DELETE FROM questions
+                                WHERE UserId = :id');
+        $this->db->bind(':id',$id);
+        $this->db->execute();
+
+        if(!$this->form()) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+      }
+
+      public function create() {
+        if(!$this->form()) {
+            $id = $this->verify->getId($_SESSION['user']);
+            $this->db->query('INSERT INTO questions(UserId) VALUES (:id)');
+            $this->db->bind(':id', $id);
+            $this->db->execute();
+            return TRUE;
+        } else {
+            return FALSE;
+        }
       }
 }

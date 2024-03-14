@@ -4,7 +4,7 @@ Class Verify
 {
     private Database $db;
 
-    public function __CONSTRUCT() {
+    public function __construct() {
         $this->db = new Database();
     }
 

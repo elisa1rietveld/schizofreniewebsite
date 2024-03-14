@@ -20,7 +20,7 @@ if (!isset($_SESSION['user'])) :
 <div class="cell2">
 <p>Benieuwd of u tekenen vertoont die kunnen wijzen op schizofrenie? <br>
 Doe deze test om erachter te komen. </p>
-<a href="zelfTest2.php">
+    <a href="zelfTest2.php">
     <button>Zelf test</button>
 </a>
 </div>
