@@ -22,7 +22,7 @@ session_start();
                         </div>
 
                         <div class="FAQitem">
-                            <p><strong>Hoe vaak komt schizofrenie voor in Nederland?</strong> <br><br><br> <em>"In 2021 stonden 50.400 mensen bij de huisarts geregistreerd met schizofrenie, 33.000 mannen en 17.400 vrouwen."</em></p>
+                        <p><strong>Wat is de behandeling voor schizofrenie?</strong> <br><br><br> <em>"Een bepaald soort medicijnen, antipsychotica genoemd, speelt een belangrijke rol in de behandeling van schizofrenie."</em></p>
                         </div>
 
                         <div class="FAQitem">
@@ -34,7 +34,7 @@ session_start();
                         </div>
 
                         <div class="FAQitem">
-                            <p><strong>Wat is de behandeling voor schizofrenie?</strong> <br><br><br> <em>"Een bepaald soort medicijnen, antipsychotica genoemd, speelt een belangrijke rol in de behandeling van schizofrenie."</em></p>
+                        <p><strong>Hoe vaak komt schizofrenie voor in Nederland?</strong> <br><br><br> <em>"In 2021 stonden 50.400 mensen bij de huisarts geregistreerd met schizofrenie, 33.000 mannen en 17.400 vrouwen."</em></p>
                         </div>
 
                         <button id="next">></button>

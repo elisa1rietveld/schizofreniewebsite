@@ -17,11 +17,13 @@ body {
   .content {
       text-align: center;
       margin-left: 10%; 
+      position: absolute;
+      z-index: -1;
   }
   
   .left-aligned-photo {
       display: inline-block;
-      max-width: 79%; 
+      max-width: 88%; 
   }
   
   .my-box1 {
@@ -29,7 +31,7 @@ body {
       height: 150px;
       background-color: #fafafa; 
       padding: 90px; 
-      margin: 20px 0 25px -250px;
+      margin: 20px 0 25px 900px;
     }
   
     .my-box1 h1 {
