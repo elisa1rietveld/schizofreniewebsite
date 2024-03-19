@@ -1,5 +1,7 @@
 @use 'profile';
+@use 'passChange';
 @import 'config';
+
 
 .user-managing{
     width: 100%;
@@ -19,6 +21,12 @@ table,tr,th,td{
     border-collapse: collapse;
     border: 2px $black solid;
     text-align: center;
+    p{
+        margin: 0;
+        cursor: pointer;
+        color: $blue;
+        text-decoration: underline;
+    }
 }
 
 tr{

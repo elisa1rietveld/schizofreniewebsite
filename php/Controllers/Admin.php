@@ -23,11 +23,11 @@ foreach ($result as $key => $object) {
     } else {
         $type = "User";
     }
-    $tablerow .= "<tr>
+    $tablerow .= "<tr class='user'>
                     <td>". $object->UserId . "</td>
-                    <td>". $object->Username . "</td>
+                    <td class='name'>". $object->Username . "</td>
                     <td>". $type . "</td>
-                    <td><a href='controllers/update.php?url=" . $object->UserId . "'>Change</a></td>
+                    <td><p class='change'>change</p></td>
                     <td><a href='controllers/delete.php?url=" . $object->UserId . "'>Delete</a></td>
                   </tr>";
 }
