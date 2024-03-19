@@ -14,7 +14,6 @@ async function get() {
 
 // does the function
 get()
-
     // puts the return in res and makes total add up all question values.
     .then((res) => {
        for (var i in res) {

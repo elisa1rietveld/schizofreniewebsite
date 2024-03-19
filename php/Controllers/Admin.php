@@ -27,7 +27,7 @@ foreach ($result as $key => $object) {
                     <td>". $object->UserId . "</td>
                     <td>". $object->Username . "</td>
                     <td>". $type . "</td>
-                    <td><a href=''>Change</a></td>
-                    <td><a href=''>Delete</a></td>
+                    <td><a href='controllers/update.php?url=" . $object->UserId . "'>Change</a></td>
+                    <td><a href='controllers/delete.php?url=" . $object->UserId . "'>Delete</a></td>
                   </tr>";
 }
