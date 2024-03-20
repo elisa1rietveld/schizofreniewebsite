@@ -21,7 +21,7 @@ div.passChange {
     .card{
         padding: 1rem;
         background-color: $dBlue;
-        width: 20%;
+        width: 400px;
         height: 500px;
         border-radius: 20px;
         color: $white;
@@ -44,27 +44,53 @@ div.passChange {
         }
 
         form{
+            width: 100%;
+        }
+
+        .temp{
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 70%;
+            height: 60%;
 
             label{
                 font-size: 1.5em;
             }
 
-            input{
+            input,select{
                 font-size: 1.2em;
                 padding: 0.5rem;
                 border-radius: 10px;
             }
-
-            button{
-                font-size: 1.2em;
-                padding: 0.5rem;
-                position: relative;
-                top: 60%;
-            }
         }
     }
+}
+
+
+.option {
+    display: none;
+    margin-top: 1rem;
+}
+
+.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div#submit{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    button{
+        font-size: 1.2em;
+        padding: 0.5rem;
+        background-color: $white;
+        border-radius: 10px;
+    }
+}
+
+#user{
+    display: none;
 }
