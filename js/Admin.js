@@ -14,6 +14,23 @@ async function update_user(data) {
     return response.json();
 }
 
+function closeMenu() {
+    menuEL.style.display = 'none';
+    body.style.overflow = 'auto';
+
+    pass.classList.remove('active');
+    userRole.classList.remove('active');
+    selectEl.value = '';
+
+}
+
+function popUp(element) {
+    element.classList.add('visible');
+    setTimeout(() => {
+        element.classList.remove('visible');
+    },3000);
+}
+
 rowEl.forEach((element) => {
     //variable for name and the change element within each row.
     let name = element.querySelector('.name').innerHTML;
@@ -31,8 +48,7 @@ rowEl.forEach((element) => {
 
 // closes menu when close button is pressed.
 closeButton.addEventListener('click', () => {
-        menuEL.style.display = 'none';
-        body.style.overflow = 'auto';
+    closeMenu();
 })
 
 
@@ -44,6 +60,7 @@ closeButton.addEventListener('click', () => {
 const selectEl = document.querySelector('select#choice');
 const pass = document.querySelector('#pass');
 const userRole = document.querySelector('#userRole');
+
 
 
 //when either user or password option is chosen.
@@ -80,5 +97,14 @@ form.addEventListener('submit',(event) => {
     update_user(data)
     .then((info) =>{
         console.log(info);
+        closeMenu();
+        const confirm = document.querySelector('.confirm');
+        popUp(confirm);
     })
 })
+
+
+
+
+
+

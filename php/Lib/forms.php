@@ -16,7 +16,7 @@ class form
 
     public function Question($userId, $Qnum){
         // makes it 'Q1' as example
-        $question = 'Q' . $Qnum;
+        $question = $Qnum;
         // selects all questions from the user.
         $this->db->query('SELECT UserId,Q1,Q2,Q3,Q4,Q5
                           FROM questions
@@ -71,10 +71,9 @@ class form
     }
 
     public function setQuestion($Qnum, $value) {      
-          $q = 'Q' . strval($Qnum);
           
           $this->db->query("UPDATE questions
-                            SET ". $q ." = :val
+                            SET ". strval($Qnum) ." = :val
                             WHERE UserId = :usr;");
                       
           $this->db->bind(':val', intval($value));

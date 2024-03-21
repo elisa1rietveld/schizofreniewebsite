@@ -18,6 +18,9 @@
           include_once 'header.php'; ?>
     <main>
         <h1>Admin Dashboard</h1>
+        <div class="confirm">
+            <p>user altered!</p>
+        </div>
         <div class="container">
             <section class='user-managing'>
                 <h2>Users</h2>

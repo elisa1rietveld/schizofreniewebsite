@@ -48,7 +48,8 @@ header{
     }
 
     .sides{
-        width: 10%;
+        min-width: 10%;
+        max-width: 15%;
         padding: 1rem;
         a{
             color:$white;

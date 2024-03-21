@@ -2,13 +2,13 @@
 // als ik hier ajax voor moet gebruiken, dan sterf ik.
 // weet ik veel hoe ik dat dan had moeten doen.
 // Er lijkt geen manier te zijn zonder jQuery.
-let svg = document.querySelector('circle.fg');
-let cText = document.querySelector('text#nice');
-var total = 0;
+const svg = document.querySelector('circle.fg');
+const cText = document.querySelector('text#nice');
+const total = 0;
 
 // returns the quesitions in json format.
 async function get() {
-    let response = await fetch('/js/get.php');
+    const response = await fetch('/js/get.php');
     return response.json();
 }
 
