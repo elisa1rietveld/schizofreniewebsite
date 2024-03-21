@@ -3,11 +3,19 @@
 
 body {
     font-family: mulish;
+    margin-top: 10rem;
 }
 
 .cell {
     background-color: white;
-    padding: 10%;
+    padding: 10rem;
+    width: 15rem;
+    height: 8rem;
+    border-radius: 5px;
+    text-align: center;
+    p{
+        margin-bottom: 1.5rem;
+    }
 }
 
 .container{
@@ -16,19 +24,19 @@ body {
     align-items: center;
 }
 
+//zelftest begin pagina
+
 .container2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.2rem;
 }
-
-//zelftest begin pagina
 
 .cell2 {
     background-color: white;
     border-radius: 5px;
-    padding: 10%;
-    margin-top: 2rem;
+    padding: 10rem;
 
     button {
         border-color:  #d4d4d7;
@@ -38,10 +46,14 @@ body {
         width: 15rem;
         height: 5rem;
         margin-top: 5px;
+        font-size: 1rem;  
+        transform: scale(1);
     }
 
     button:hover {
         background-color: #acacac; 
         border-color: #acacac; 
+        transform: scale(1.1);
+        margin-left: 10px;
      }
 }

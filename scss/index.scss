@@ -15,8 +15,8 @@ body {
     margin-top: 6rem;
 }  
   .content {
-      text-align: center;
-      margin-left: 10%; 
+      // text-align: center;
+      // margin-left: 10%; 
       position: absolute;
       z-index: -1;
   }
@@ -25,13 +25,17 @@ body {
       display: inline-block;
       max-width: 88%; 
   }
-  
+
+  .container {
+    margin-top: 8rem;
+  }
+
   .my-box1 {
       width: 320px;
       height: 150px;
       background-color: #fafafa; 
       padding: 90px; 
-      margin: 20px 0 25px 900px;
+      margin: 55px 0 55px 700px;
     }
   
     .my-box1 h1 {
@@ -39,3 +43,4 @@ body {
     }
 
     #more {display: none;}
+

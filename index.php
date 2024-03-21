@@ -14,15 +14,18 @@
 <body>
     <?php include_once 'php/header.php';?>
     <div class="content">
-        <img src="img/Index1.png" alt="Left-aligned Photo" class="left-aligned-photo">
+        <img src="img/Index1.png" alt="Background photo" class="left-aligned-photo">
     </div>
-    
+
+<div class="container">
   <div class="my-box1">
     <h1>Schizofrenie</h1>
     <p>Schizofrenie is een complexe psychiatrische aandoening die gekenmerkt wordt door verstoringen in het denken, de emoties en het gedrag van een individu. Voor uitgebreide informatie, ondersteunende hulpbronnen en zelfevaluatiemogelijkheden, wordt verwezen naar deze website.
         <button onclick="location.href='info.php'">Lees Meer</button>
     </p>
   </div>
+</div>
+
   <script src="js/index.js"></script>
 </body>
 </html>

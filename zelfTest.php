@@ -19,9 +19,9 @@ if (!isset($_SESSION['user'])) :
 <div class="container2">
 <div class="cell2">
 <p>Benieuwd of u tekenen vertoont die kunnen wijzen op schizofrenie? <br>
-Doe deze test om erachter te komen. </p>
+Doe deze test om erachter te komen! </p>
 <a href="zelfTest2.php">
-    <button>Start de test</button>
+    <button><strong>Start de zelftest</strong></button>
 </a>
 </div>
 </div>
