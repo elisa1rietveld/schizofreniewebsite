@@ -3,7 +3,7 @@
         <span id="cross">x</span>
         <h3 class="username">Change pass for !user!</h3>
         <div class="temp">
-            <form action="Controllers/update.php" id='form' method='POST' class='temp'>
+            <form id='form1' method='POST' class='temp'>
             <label for="choice">keuze: </label>
             <select name="choice" id="choice">
                 <option disabled selected value> -- select an option -- </option>
@@ -25,7 +25,6 @@
                 </div>
             </div>
             <div id="submit">
-                <input type="text" value="def" name="user" id='user'>
                 <button type="submit">Submit</button>
             </form>
         </div>

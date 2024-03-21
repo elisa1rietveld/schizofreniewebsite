@@ -14,8 +14,6 @@ div.passChange {
     align-items: center;
     flex-direction: row;
 
-    opacity: 0;
-
     transition: opacity 3s ease-in-out;
 
     .card{
@@ -93,4 +91,10 @@ div#submit{
 
 #user{
     display: none;
+}
+
+.no {
+    color: red;
+    text-decoration: none;
+    cursor: not-allowed;
 }

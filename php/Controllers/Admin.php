@@ -18,16 +18,22 @@ $result = $db->resultSet();
 
 $tablerow = "";
 foreach ($result as $key => $object) {
+    $changable = 'change';
     if ($object->userRole == 88) {
         $type = "Admin";
     } else {
         $type = "User";
     }
+
+    if ($object->UserId == 1) {
+        $changable = 'no';
+    }
+
     $tablerow .= "<tr class='user'>
                     <td>". $object->UserId . "</td>
                     <td class='name'>". $object->Username . "</td>
                     <td>". $type . "</td>
-                    <td><p class='change'>change</p></td>
+                    <td><p class='". $changable ."'>change</p></td>
                     <td><a href='controllers/delete.php?url=" . $object->UserId . "'>Delete</a></td>
                   </tr>";
 }
