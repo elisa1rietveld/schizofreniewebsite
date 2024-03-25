@@ -18,22 +18,27 @@ $result = $db->resultSet();
 
 $tablerow = "";
 foreach ($result as $key => $object) {
-    $changable = 'change';
     if ($object->userRole == 88) {
         $type = "Admin";
     } else {
         $type = "User";
     }
+    if ($object->UserId == 1 || $object->Username == $_SESSION['user']) {
+        $tablerow .= "<tr class='user'>
+        <td>". $object->UserId . "</td>
+        <td class='name'>". $object->Username . "</td>
+        <td>". $type . "</td>
+        <td><p class='no'>change</p></td>
+        <td><p class='no'>delete</p></td>
+      </tr>";;
 
-    if ($object->UserId == 1) {
-        $changable = 'no';
+    } else {
+        $tablerow .= "<tr class='user'>
+                        <td>". $object->UserId . "</td>
+                        <td class='name'>". $object->Username . "</td>
+                        <td>". $type . "</td>
+                        <td><p class='change'>change</p></td>
+                        <td><a href='controllers/delete.php?url=" . $object->UserId . "'>Delete</a></td>
+                      </tr>";
     }
-
-    $tablerow .= "<tr class='user'>
-                    <td>". $object->UserId . "</td>
-                    <td class='name'>". $object->Username . "</td>
-                    <td>". $type . "</td>
-                    <td><p class='". $changable ."'>change</p></td>
-                    <td><a href='controllers/delete.php?url=" . $object->UserId . "'>Delete</a></td>
-                  </tr>";
-}
+    }

@@ -21,6 +21,7 @@ function closeMenu() {
     pass.classList.remove('active');
     userRole.classList.remove('active');
     selectEl.value = '';
+    document.querySelector('#Roles').value= '';
 
 }
 

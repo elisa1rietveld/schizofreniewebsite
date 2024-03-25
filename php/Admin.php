@@ -19,7 +19,7 @@
     <main>
         <h1>Admin Dashboard</h1>
         <div class="confirm">
-            <p>user altered!</p>
+            <p>user altered, Please refresh!</p>
         </div>
         <div class="container">
             <section class='user-managing'>

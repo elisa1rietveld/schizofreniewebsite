@@ -19,6 +19,7 @@
                 <div class="option" id="userRole">
                     <label for="Roles">Role: </label>
                     <select name="Roles" id="Roles">
+                        <option disabled selected value> -- userRole -- </option>
                         <option value="1">User</option>
                         <option value="88">Admin</option>
                     </select>
