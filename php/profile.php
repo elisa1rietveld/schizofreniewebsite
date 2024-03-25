@@ -21,11 +21,7 @@
     <main>
         <h1>Hallo <?php echo $_SESSION['user']?>!</h1>
         <div class="container">
-            <!-- if statement to show a "make the test" link if the test wasn't made -->
-            <!-- in said else statement another section with some information about what to do  -->
-            <!-- a section with the % chance of having schizo -->
             
-            <!-- another section with account management -->
             <section class="manage">
                 <h2>Account</h2>
                 <p>Gebruikersnaam: <?php echo $_SESSION['user']?></p>
@@ -51,9 +47,6 @@
             <section class="result ai-center">
                 <h2>Result</h2>
                 <div class="results">
-                    <!-- What i'm trying to do is make a progress circle. We currently only have the circle -->
-                    <!-- Js needs to be added to show the %, although I could probably use PHP functions for it aswell -->
-                    <!-- css is used for the animation -->
                     <svg id="progress" width="300" height="300" viewBox=" 0 0 300 300">
                         <circle class="bg" cx="150" cy="150" r="130" fill='none' stroke="grey" stroke-width="20" />
                         <circle class="fg" cx="150" cy="150" r="130" fill='none' stroke="blue" stroke-width="20" 

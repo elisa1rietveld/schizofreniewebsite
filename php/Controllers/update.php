@@ -1,7 +1,7 @@
 <?php
 require_once('../lib/database.php');
 require_once('../lib/verify.php');
-
+// just a honestly useless form object. It's just nice to have.
 class form 
 {
     public $username;
@@ -25,13 +25,14 @@ $verify = new Verify();
 $form = new form($_POST['name'],$_POST['choice'],$_POST['password'], $_POST['Roles']);
 
 
-
+// change userRole if it was selected.
 if ($form->choice == 'userRole') {
     //changes userRole and returns true if it doesn't fuck up
     $db->query('UPDATE Users SET userRole = (:userRole) WHERE Username = :username');
     $db->bind(':username',$form->username);
     $db->bind(':userRole', $form->Roles);
     
+    // returns a true or false.
     try{
         $db->execute();
         echo json_encode(true);
@@ -39,6 +40,7 @@ if ($form->choice == 'userRole') {
         echo json_encode(false);
     }
 
+    // changes pass if it was selected.
 } else if ($form->choice == 'pass') {
     // hashes password and returns true if it doesn't fuck up
     $hashed = password_hash($form->password, PASSWORD_BCRYPT);

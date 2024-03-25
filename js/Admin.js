@@ -4,7 +4,6 @@ const rowEl = document.querySelectorAll('tr.user');
 const menuNameEL = document.querySelector('h3.username');
 const closeButton = document.querySelector('span#cross');
 const body = document.querySelector('body');
-const userIn = document.querySelector('input#user');
 
 async function update_user(data) {
     const response = await fetch('/php/Controllers/update.php', {
@@ -96,8 +95,7 @@ form.addEventListener('submit',(event) => {
 
     // sends data and shows return.
     update_user(data)
-    .then((info) =>{
-        console.log(info);
+    .then(() =>{
         closeMenu();
         const confirm = document.querySelector('.confirm');
         popUp(confirm);

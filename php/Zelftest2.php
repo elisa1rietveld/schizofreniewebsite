@@ -8,8 +8,7 @@ $db = new Database();
 $forms= new form();
 
 
-
-// sets qmade to the amount of questions made
+//makes a form for the user if it doesn't already have one.
 if(!$forms->form()) {
     $forms->create();
 }

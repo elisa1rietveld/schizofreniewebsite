@@ -27,7 +27,7 @@ require_once 'Controllers/register.php';
             <input type="password" name="password" id="password">
             
         <?php if (isset($handler)): ?>
-            <p class="loginError">User created! Redirecting...</p>
+            <p class="loginSucess">User created! Redirecting...</p>
         <?php elseif ($error) : ?>
             <p class="loginError">username or password is not allowed</p>
         <?php endif; ?>

@@ -28,7 +28,7 @@ include_once 'Controllers/Change.php';
             <input type="password" name="newPassword" id="newPassword">
             
         <?php if (isset($done)): ?>
-            <p class="loginError">password changed! Redirecting...</p>
+            <p class="loginSucess">password changed! Redirecting...</p>
         <?php endif; ?>
         
             <button type="submit" id="submit">Change password</button>

@@ -17,6 +17,7 @@ if (isset($_POST['username'])) {
         header('Refresh: 1, url=/php/profile.php');
         $loading = true;
     } else {
+        // this is just used to give an error message on the login page.
         $handler = 'error';
     }
 }

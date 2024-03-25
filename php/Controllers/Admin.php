@@ -5,11 +5,12 @@ include_once 'Lib/Verify.php';
 $db = new Database();
 $verify = new Verify();
 
+// sends you back to the login page if anyone but an admin tries to access the page
 if (!$verify->userType($_SESSION['user'], 88)) {
     header('Refresh: 0, url=Login.php');
     exit;
 } 
-
+// the following code is used to set the user list on the admin dashboard.
 $db->query('SELECT UserId,Username, userRole
             FROM Users
             ORDER BY userRole DESC;');
@@ -23,6 +24,7 @@ foreach ($result as $key => $object) {
     } else {
         $type = "User";
     }
+    // the if statements are so you can not alter your own role or the admins.
     if ($object->UserId == 1 || $object->Username == $_SESSION['user']) {
         $tablerow .= "<tr class='user'>
         <td>". $object->UserId . "</td>

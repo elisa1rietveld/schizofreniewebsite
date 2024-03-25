@@ -22,13 +22,13 @@ if (isset($_POST['newPassword']) && isset($_POST['oldPass'])) {
         $db->Bind(':pass', $newhashpass);
         $db->execute();
     }
+
     // checks if all went well
-    
     if ($verify->pass($_SESSION['user'],$_POST['newPassword'])) {
         $done = TRUE;
         return header('Refresh: 2, url=/php/profile.php');
     }
     else {
-        return 'error';
+        return 'something went wrong while changing password';
     }
 }

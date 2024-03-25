@@ -8,11 +8,13 @@ $db = new Database();
 $verify = new Verify();
 $form = new form();
 
+// if the user is an admin. it will send them to the admin dashboard.
 if ($verify->userType($_SESSION['user'], 88)) {
     header('Refresh: 0, url=Admin.php');
     exit;
 }
 
+// default values.
 $qMade = 0;
 $total = 0;
 
@@ -53,5 +55,5 @@ $num = $total * 4;
 $round = 816.81408993334624200028727965267;
 $blue = $round * ($num / 100);
 $grey = $round - $blue;
-
+// this is used for the nice circle
 $stroke = '"'. $blue . ' ' . $grey . '"';

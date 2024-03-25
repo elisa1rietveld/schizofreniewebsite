@@ -1,7 +1,6 @@
 const questions = document.querySelectorAll('.question')
 const dictCook = getCookies();
 const form = document.querySelector('#form');
-console.log(dictCook);
 
 function getCookies() {
     // splits the cookies
@@ -17,7 +16,7 @@ function getCookies() {
         })
         return cookie;
     } else {
-        console.log('issa empty');
+        console.error('cookies are empty');
         return false;
     }
 }
@@ -37,9 +36,6 @@ function newCookie(name, value) {
     document.cookie = cookie;
 }
 
-
-console.log(questions);
-
 questions.forEach((element, key) =>{
     let inputs = element.querySelectorAll('input');
 
@@ -56,7 +52,6 @@ questions.forEach((element, key) =>{
         }
         input.addEventListener('change', () => {
             newCookie(input.name, input.value);
-            console.log(getCookies());
             if(key < 5) {
                 questions[key].classList.remove('active');
                 questions[key+1].classList.add('active');    
