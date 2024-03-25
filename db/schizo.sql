@@ -35,5 +35,7 @@ VALUES
   ("Basil Waters","ZRZ48OBK8VX",1),
   ("Chiquita Torres","VEU44ILG1QB",1),
   ("admin","$2y$10$qOz/yV0aYnFu8S6FS9XIE.60Hvj3Uj1DGQtqgReV3EBpWhgbJl0wS",88);
+  -- pass for admin is "Pass". This admin account can elevate users and change their passwords.
+  -- You can create a new user for the user profile.
   
 DROP TABLE Questions;

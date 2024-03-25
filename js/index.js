@@ -1,21 +1,10 @@
-const nav = document.getElementById('mySideNav');
-
-function navWidth() {
-    if (nav.style.width == '250px') {
-    nav.style.width = '0px';
-    } else {
-        nav.style.width = '250px';
-    }
-    console.log('clicked');
-}
-
-
-const items = document.querySelectorAll('.FAQcontainer .FAQitem');
+    const items = document.querySelectorAll('.FAQcontainer .FAQitem');
     const next = document.getElementById('next');
     const prev = document.getElementById('prev');
     let active = Math.floor(items.length/2);
     
     function loadShow(){
+      console.log('hi');
 
     let stt = 0;
     items[active].style.transform = `none`;
@@ -37,14 +26,16 @@ const items = document.querySelectorAll('.FAQcontainer .FAQitem');
       items[i].style.opacity = stt > 2 ? 0 : 0.6;
     } 
   }
-  loadShow();
+
   next.onclick = function(){
     active = active + 1 <items.length ? active + 1 : active;
     
     loadShow();
   }
-
+  
   prev.onclick = function(){
     active = active - 1 >= 0 ? active - 1 : active;
     loadShow();
   }
+
+  loadShow();

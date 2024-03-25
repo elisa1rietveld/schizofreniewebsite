@@ -95,7 +95,7 @@ form.addEventListener('submit',(event) => {
 
     // sends data and shows return.
     update_user(data)
-    .then(() =>{
+    .then((info) =>{
         closeMenu();
         const confirm = document.querySelector('.confirm');
         popUp(confirm);

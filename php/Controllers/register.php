@@ -18,7 +18,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         } 
         
         catch(Exception $e) {
-            // echo "error";    
+              
             $error = TRUE;
         }
 }
