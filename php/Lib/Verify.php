@@ -4,9 +4,10 @@ Class Verify
 {
     private Database $db;
 
-    public function __CONSTRUCT() {
+    public function __construct() {
         $this->db = new Database();
     }
+
     // verifies password
     public function Pass($user,$pass) {
         
@@ -62,5 +63,18 @@ Class Verify
             return FALSE;
         }
     }
-}
 
+    public function getId($user) {
+        $this->db->query('SELECT userId
+                          FROM USERS
+                          WHERE userName = :user;');
+        $this->db->bind(':user',$user);
+        $result = $this->db->single();
+
+        if(isset($result->userId)){
+            return intval($result->userId);
+        } else {
+            return FALSE;
+        }
+    }
+}

@@ -14,9 +14,13 @@
     <div class='background'>
         <img src="../img/Index1.png" alt="">
     </div>
-    <?php include_once 'header.php'; ?>
+    <?php include_once 'Component/changePass.php'; 
+          include_once 'header.php'; ?>
     <main>
         <h1>Admin Dashboard</h1>
+        <div class="confirm">
+            <p>user altered, Please refresh!</p>
+        </div>
         <div class="container">
             <section class='user-managing'>
                 <h2>Users</h2>
@@ -46,5 +50,6 @@
     </main>
 
     <script src="/js/index.js"></script>
+    <script src="/js/Admin.js"></script>
 </body>
 </html>

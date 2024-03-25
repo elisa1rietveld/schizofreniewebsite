@@ -23,11 +23,22 @@ foreach ($result as $key => $object) {
     } else {
         $type = "User";
     }
-    $tablerow .= "<tr>
-                    <td>". $object->UserId . "</td>
-                    <td>". $object->Username . "</td>
-                    <td>". $type . "</td>
-                    <td><a href=''>Change</a></td>
-                    <td><a href=''>Delete</a></td>
-                  </tr>";
-}
+    if ($object->UserId == 1 || $object->Username == $_SESSION['user']) {
+        $tablerow .= "<tr class='user'>
+        <td>". $object->UserId . "</td>
+        <td class='name'>". $object->Username . "</td>
+        <td>". $type . "</td>
+        <td><p class='no'>change</p></td>
+        <td><p class='no'>delete</p></td>
+      </tr>";;
+
+    } else {
+        $tablerow .= "<tr class='user'>
+                        <td>". $object->UserId . "</td>
+                        <td class='name'>". $object->Username . "</td>
+                        <td>". $type . "</td>
+                        <td><p class='change'>change</p></td>
+                        <td><a href='controllers/delete.php?url=" . $object->UserId . "'>Delete</a></td>
+                      </tr>";
+    }
+    }

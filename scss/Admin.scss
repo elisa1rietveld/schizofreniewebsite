@@ -1,5 +1,7 @@
 @use 'profile';
+@use 'passChange';
 @import 'config';
+
 
 .user-managing{
     width: 100%;
@@ -19,11 +21,17 @@ table,tr,th,td{
     border-collapse: collapse;
     border: 2px $black solid;
     text-align: center;
+    p{
+        margin: 0;
+        cursor: pointer;
+        color: $blue;
+        text-decoration: underline;
+    }
 }
 
 tr{
     &:nth-child(even) {
-        background-color: rgba($pBlue,0.25);
+        background-color: rgba($dBlue,0.5);
     }
     &:nth-child(1) {
         position: sticky;
@@ -36,5 +44,24 @@ tr{
             padding: 0 1rem ;
         }
     }
+}
+
+.confirm{
+    background-color: green;
+    position: absolute;
+    top: 8%;
+    left: -20%;
+    color: $white;
+    transition: all 0.75s cubic-bezier(0, 0, 0.11, 1);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+    p{
+        padding: 0 4rem;
+    }
+}
+
+.visible{
+    left: 2% !important;
 }
 

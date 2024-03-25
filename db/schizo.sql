@@ -30,9 +30,9 @@ FOREIGN KEY(UserId) REFERENCES Users(UserId)
 -- until here for the creation of the database, rest is testing
 
 INSERT INTO Users(username, password) VALUES ('piet','$2y$10$KWWvOLHp/sFLCmFxY7eAjOKViN3Sbg1SUlD34VXCFITcbELzUcCsu');
-INSERT INTO Questions(UserId,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10) VALUES (2,3,4,2,1,4,1,5,3,1,3);
+INSERT INTO Questions(UserId,Q1,Q2,Q3,Q4,Q5) VALUES (2,3,4,2,1,4);
 INSERT INTO Questions(UserId,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9) VALUES (1,3,5,3,2,1,3,5,3,2);
-INSERT INTO Questions(UserId) VALUES (1);
+INSERT INTO Questions(UserId) VALUES (2);
 
 INSERT INTO Users (Username,password,userRole)
 VALUES
@@ -43,13 +43,13 @@ VALUES
   ("Chiquita Torres","VEU44ILG1QB",88);
 
 
-SELECT Users.username,Users.UserId,Questions.Q1,Questions.Q2,Questions.Q3,Questions.Q4,Questions.Q5 -- ,Questions.Q6,Questions.Q7,Questions.Q8,Questions.Q9,Questions.Q10
-FROM Users
-RIGHT JOIN Questions
-ON Questions.UserId = Users.UserId
-WHERE Users.username = "Admin";
+SELECT UserId,Q1,Q2,Q3,Q4,Q5
+FROM Questions
+WHERE UserId = 2;
 
 select * from Users;
+
+select * from questions;
 
 UPDATE Users
 SET password = '$2y$10$Fs/PHZjoeBMyOJNEdGgm3Ocmy4aJM0MRKGhhrLpvu/JHuLfEp4GV2'
@@ -59,17 +59,21 @@ UPDATE Users
 SET userRole = 88
 WHERE Username = 'Admin';
 
-UPDATE Questions AS Q
-LEFT JOIN Users as U
-ON Q.UserId = U.UserId
-SET Q.Q1 = 0
-WHERE U.username = "Admin";
+UPDATE questions
+SET Q1 = 5
+WHERE UserId = '2';
 
 DELETE FROM Users
 WHERE username = 'Admin';
 
 DELETE FROM Questions
-WHERE userId = 1;
+WHERE userId = 2;
+
+SELECT Users.userId, Users.username, TestId
+FROM Users
+RIGHT JOIN Questions
+ON UserId = Users.UserId
+WHERE Users.userId = 2;
 
 DROP DATABASE schizo;
 

@@ -2,15 +2,35 @@
 // als ik hier ajax voor moet gebruiken, dan sterf ik.
 // weet ik veel hoe ik dat dan had moeten doen.
 // Er lijkt geen manier te zijn zonder jQuery.
+const svg = document.querySelector('circle.fg');
+const cText = document.querySelector('text#nice');
+const total = 0;
 
-        let bignum = document.getElementById("nice").innerHTML;
-        bignum = "0." + bignum.replace("%","");
+// returns the quesitions in json format.
+async function get() {
+    const response = await fetch('/js/get.php');
+    return response.json();
+}
 
-        let num = 0. + Number(bignum);
-        console.log(num);
-        let round = 816.81408993334624200028727965267;
-        let blue = round * num;
-        let grey = round - blue;
-
-        const circle = document.querySelector('circle.fg');
-        circle.setAttribute("stroke-dasharray",blue + " " + grey);
+// does the function
+get()
+    // puts the return in res and makes total add up all question values.
+    .then((res) => {
+       for (var i in res) {
+            if(res[i] != null) {
+              total += res[i];
+            }
+            else {
+               total = null;
+               break;
+            }       
+        }
+    // splices up the circle up into blue and grey based off of percentage.
+    const num = total * 4;
+    const round = 816.81408993334624200028727965267;
+    const blue = round * (num / 100);
+    const grey = round - blue;
+    // sets the values.
+    svg.setAttribute('stroke-dasharray', (blue + " " + grey));
+    cText.innerHTML = num + '%';
+});

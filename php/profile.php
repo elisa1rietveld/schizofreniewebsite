@@ -38,13 +38,13 @@
                 <h2>Selftest</h2>
                 <?php if ($qMade == 5): ?>
                     <p>Je hebt de test gemaakt! Wil je hem opnieuw doen?</p>
-                    <a href="" class="test-button">Redo test</a>
+                    <a href="Controllers/ResetTest.php" class="test-button">Redo test</a>
                 <?php elseif ($qMade > 0): ?>
                     <p>Je bent nog bezig met de test, ga verder?</p>
-                    <a href="" class="test-button">Verder met de test</a>
+                    <a href="/zelftest2.php" class="test-button">Verder met de test</a>
                 <?php else: ?>
                     <p>Je hebt de test nog niet gedaan, wil je hem maken?</p>
-                    <a href="/zelfTest2.php" class="test-button">Maak de test</a>
+                    <a href="/zelfTest.php" class="test-button">Maak de test</a>
                 <?php endif; ?>
             </section>
 
@@ -63,7 +63,7 @@
                     </svg>
                     <div class="box">
                         
-                        <?php if ($qMade == 5 && $num > 0) : ?>
+                        <?php if ($qMade == 5) : ?>
                             <h3>What I do now?</h3>
                             <p>If you have a 60% chance or higher we recommend you looking help from a professional, our test is just to give a direction
                                And is not made to perfectly predict your situation.
