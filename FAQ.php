@@ -43,6 +43,6 @@ session_start();
                     </div>
                 </section>
             </main>
-        <script src="js/index.js"></script>
+        <script src="js/nav.js"></script>
     </body>
     </html>

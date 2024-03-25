@@ -1,6 +1,5 @@
 <?php 
 session_start();
-var_dump($_POST);
 // I made a controller for this shit, AKA the code part will be in a seperate file
 require_once 'php/zelfTest2.php';
 ?>
@@ -64,5 +63,6 @@ require_once 'php/zelfTest2.php';
 
 <script src="js/index.js"></script>
 <script src="js/selftest.js"></script>
+<script src="js/nav.js"></script>
 </body>
 </html>

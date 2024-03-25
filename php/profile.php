@@ -21,7 +21,7 @@
     <main>
         <h1>Hallo <?php echo $_SESSION['user']?>!</h1>
         <div class="container">
-            
+
             <section class="manage">
                 <h2>Account</h2>
                 <p>Gebruikersnaam: <?php echo $_SESSION['user']?></p>
@@ -77,7 +77,7 @@
             </section>
         </div>
     </main>
-    <script src="/js/index.js"></script>
+    <script src="/js/nav.js"></script>
 </body>
 </html>
 <?php endif;?>
