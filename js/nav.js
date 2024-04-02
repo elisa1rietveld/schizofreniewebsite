@@ -6,5 +6,4 @@ function navWidth() {
     } else {
         nav.style.width = '250px';
     }
-    console.log('clicked');
 }

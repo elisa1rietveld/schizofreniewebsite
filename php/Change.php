@@ -19,7 +19,7 @@ include_once 'Controllers/Change.php';
 </header>
 <main class="container">
     <div class="login">
-        <h1>Password</h1>
+        <h1>Change password</h1>
         <form action="Change.php" method="post">
             <label for="oldPass">old password</label>
             <input type="password" name="oldPass" id="oldPass">  

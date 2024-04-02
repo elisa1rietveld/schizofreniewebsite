@@ -11,7 +11,7 @@ $verify = new Verify();
 if ($_POST['choice'] == 'userRole') {
     //changes userRole and returns true if it doesn't fuck up
     $db->query('UPDATE Users SET userRole = (:userRole) WHERE Username = :username');
-    $db->bind(':username',$_POST['username']);
+    $db->bind(':username',$_POST['name']);
     $db->bind(':userRole', $_POST['Roles']);
     
     // returns a true or false.
