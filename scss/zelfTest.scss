@@ -3,7 +3,7 @@
 
 body {
     font-family: mulish;
-    margin-top: 10rem;
+    margin-top: 0.5rem;
 }
 
 .cell {
@@ -22,6 +22,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    button {
+        border-color:  #d4d4d7;
+        border-radius: 5px;
+        background-color:  #d4d4d7; 
+        transition: background-color 0.3s ease; 
+        width: 15rem;
+        height: 5rem;
+        margin-top: 5px;
+        font-size: 1rem;  
+        transform: scale(1);
+    }
+
+    button:hover {
+        background-color: #acacac; 
+        border-color: #acacac; 
+        transform: scale(1.1);
+     }
 }
 
 //zelftest begin pagina
@@ -54,7 +72,7 @@ body {
         background-color: #acacac; 
         border-color: #acacac; 
         transform: scale(1.1);
-        margin-left: 10px;
+        margin-left: 5px;
      }
 }
 

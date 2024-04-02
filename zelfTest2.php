@@ -54,7 +54,8 @@ require_once 'php/zelfTest2.php';
     </div>
 
     <div class="question">
-      <button type="submit">submit</button>
+      <p>Bedankt voor het invullen van alle antwoorden. Wanneer u klaar bent, kunt u op 'Submit' klikken om uw reactie te verzenden.</p>
+      <button type="submit">Submit!</button>
     </div>
 
 </form>
