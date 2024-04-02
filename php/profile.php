@@ -58,12 +58,11 @@
                         
                         <?php if ($qMade == 5) : ?>
                             <h3>What I do now?</h3>
-                            <p>If you have a 60% chance or higher we recommend you looking help from a professional, our test is just to give a direction
-                               And is not made to perfectly predict your situation.
+                            <p>Als jij boven 60% gehaald heb, raden wij je aan om naar een professional te gaan.
                             </p>
                         <?php else: ?>
-                            <h3>You haven't done the test yet</h3>
-                            <p>Please do the test to see how big the chance is you have schizo</p>
+                            <h3>Je hebt de test nog niet gedaan</h3>
+                            <p>Wij raden je aan om de test te doen!</p>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -71,9 +70,9 @@
 
             <section class="contact">
                 <h2>Contact professionals</h2>
-                <p>To contact professionals you can go
-                <a href="/contact.php">here</a>. 
-                Alternatively we have health experts available in your local hospital</p>
+                <p>om professionals te contacteren kan je
+                <a href="/contact.php">hier klikken</a>. 
+                ook hebben wij experts in lokale ziekenhuizen</p>
             </section>
         </div>
     </main>

@@ -5,17 +5,18 @@ include_once '../Lib/database.php';
 $db = new Database();
 
 //gets the userid from the link
-$userId = $_GET['url'];
 
 // if there was a link it will delete the user. This is used through the admin.
 if (isset($_GET['url'])) {
-        $db->Query('DELETE FROM Users
-        WHERE UserId= :username;');
+    $userId = $_GET['url'];
 
-        $db->bind(':username', $userId);
+    $db->Query('DELETE FROM Users
+    WHERE UserId= :username;');
 
-        if ($db->execute()) {
-        header('Refresh: 0, url=../profile.php');
+    $db->bind(':username', $userId);
+
+    if ($db->execute()) {
+        header('Refresh: 0,url=../profile.php');
     } else {
         echo 'user could not be deleted.';
     }
@@ -33,5 +34,5 @@ if (isset($_GET['url'])) {
         header('Refresh: 0, url=/index.php');
     } else {
         echo 'error';
-}
+    }
 }

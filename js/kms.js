@@ -1,7 +1,6 @@
 // Dit is de meest omslachtige manier om dit te doen maar holy shit
 // als ik hier ajax voor moet gebruiken, dan sterf ik.
 // weet ik veel hoe ik dat dan had moeten doen.
-// Er lijkt geen manier te zijn zonder jQuery.
 const svg = document.querySelector('circle.fg');
 const cText = document.querySelector('text#nice');
 const total = 0;
