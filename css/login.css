@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Poppins:wght@500&display=swap);
+body {
+  background-color: rgb(238, 234, 235);
+  font-family: "mulish";
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.25;
+}
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3.5rem !important;
+}
+
+html, body {
+  font-family: "Poppins", sans-serif !important;
+}
+
+body {
+  background-color: #98bad5;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+}
+
+.login {
+  background-color: rgb(238, 234, 235);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transition: 0.3s ease-in-out;
+  max-width: 25%;
+}
+.login:hover {
+  box-shadow: rgba(0, 0, 0, 0.07) 9px 18px 28px, rgba(0, 0, 0, 0.11) 7px 14px 14px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Roboto";
+}
+h1.logging {
+  margin: 2rem !important;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+form label, form button {
+  text-align: center;
+  margin: 1rem;
+  margin-bottom: 0;
+}
+form input {
+  font-size: 24px;
+  padding: 0.5rem;
+  margin: 1px;
+  border-radius: 10px;
+  border: 2px rgba(0, 0, 0, 0.5) solid;
+}
+form #submit {
+  font-size: 24px;
+  border-radius: 10px;
+  border: 2px rgba(0, 0, 0, 0.5) solid;
+}
+form a {
+  text-align: center;
+  font-size: 24px;
+  color: #000000;
+}
+
+.loginError {
+  font-size: 12px;
+  color: red;
+  text-wrap: wrap;
+  text-align: center;
+}
+
+.loginSucess {
+  font-size: 12px;
+  color: green;
+  text-wrap: wrap;
+  text-align: center;
+}
+
+/*# sourceMappingURL=login.css.map */

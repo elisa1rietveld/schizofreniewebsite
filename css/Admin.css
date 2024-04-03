@@ -1,0 +1,419 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Poppins:wght@500&display=swap);
+body {
+  background-color: rgb(238, 234, 235);
+  font-family: "mulish";
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.25;
+}
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3.5rem !important;
+}
+
+header {
+  margin-top: 6rem;
+  font-family: "Roboto", "Mulish";
+}
+header * {
+  line-height: 1.5;
+}
+
+.banner {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 6%;
+  background-color: #1f1f33;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.banner h2 {
+  font-size: 24px;
+  color: white;
+}
+.banner .hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 2rem;
+  padding: 0.5rem 0 0.5rem 0;
+  cursor: pointer;
+}
+.banner .hamburger div {
+  height: 8px;
+  width: 50px;
+  background-color: white;
+  border-radius: 1rem;
+  margin: 3px;
+}
+.banner .sides {
+  min-width: 10%;
+  max-width: 15%;
+  padding: 1rem;
+}
+.banner .sides a {
+  color: #ffffff;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+.banner .sides p {
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
+  background-color: transparent;
+  padding: 0rem;
+}
+
+#mySideNav {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 5;
+  top: 6%;
+  left: 0;
+  background-color: hsl(240, 25%, 26%);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+#mySideNav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#mySideNav ul li {
+  width: 80%;
+  padding: 0.5rem;
+  text-decoration: none;
+  border-radius: 1rem;
+  margin-left: 2rem;
+}
+#mySideNav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 36px;
+  display: flex;
+  width: 100%;
+  text-wrap: nowrap;
+  overflow-x: hidden;
+}
+#mySideNav a:after {
+  content: " ";
+  position: absolute;
+  right: 0;
+  translate: 100% 0;
+  z-index: -1;
+  width: 100%;
+  height: 54px;
+  background-color: #1f1f33;
+  border-radius: 30px 0 0 30px;
+  transition: translate 0.15s ease-in-out;
+}
+#mySideNav a:hover:after {
+  translate: 0 0;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  width: fit-content !important;
+}
+.closebtn::after {
+  background-color: transparent !important;
+}
+
+body,
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: rgba(50, 50, 83, 0.7);
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  font-family: "Poppins";
+  color: hsl(240, 25%, 26%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+main {
+  padding: 0 10rem;
+}
+
+section {
+  padding: 2rem;
+  background: #ffffff;
+  width: 49%;
+  margin: 0.5rem 0;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+}
+section h2 {
+  text-align: center;
+  font-size: 48px;
+  font-family: "Poppins";
+  margin: 0.5rem;
+  color: hsl(240, 25%, 26%);
+}
+section * {
+  font-size: 32px;
+}
+section a {
+  margin: 0.5rem 0;
+  font-style: normal;
+  color: hsl(240, 19%, 38%);
+}
+
+.manage p {
+  margin: 0.5rem 0;
+}
+.manage a {
+  width: fit-content;
+}
+
+.test p,
+.test a {
+  text-align: center;
+}
+
+.result {
+  width: 100%;
+}
+.result .results {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.result .results svg circle.fg {
+  transform: rotate(-90deg);
+  transform-origin: 150px 150px;
+}
+.result .box {
+  max-width: 755px;
+}
+
+#progress {
+  position: relative;
+  bottom: 50px;
+}
+
+.contact p,
+.contact a {
+  padding: 0;
+  margin: 0;
+  width: fit-content;
+  height: fit-content;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.test-button {
+  background-color: hsl(240, 19%, 38%);
+  color: #ffffff;
+  border: 4px hsl(240, 19%, 38%) solid;
+  padding: 0.5rem;
+  border-radius: 20px;
+  transition: all 0.5s ease-in-out;
+  text-decoration: none;
+}
+.test-button:hover {
+  background-color: #ffffff;
+  color: hsl(240, 19%, 38%);
+}
+
+.confirm {
+  background-color: green;
+}
+
+div.passChange {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  transition: opacity 3s ease-in-out;
+}
+div.passChange .card {
+  padding: 1rem;
+  background-color: hsl(240, 25%, 26%);
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  color: #ffffff;
+  border: 2px hsl(240, 19%, 38%) solid;
+}
+div.passChange .card h3 {
+  font-size: 2em;
+  margin-top: 0;
+}
+div.passChange .card #cross {
+  position: relative;
+  top: 0;
+  left: 90%;
+  width: fit-content;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+}
+div.passChange .card form {
+  width: 100%;
+}
+div.passChange .card .temp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60%;
+}
+div.passChange .card .temp label {
+  font-size: 1.5em;
+}
+div.passChange .card .temp input, div.passChange .card .temp select {
+  font-size: 1.2em;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.option {
+  display: none;
+  margin-top: 1rem;
+}
+
+.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div#submit {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+div#submit button {
+  font-size: 1.2em;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+#user {
+  display: none;
+}
+
+.no {
+  color: red;
+  text-decoration: none;
+  cursor: not-allowed;
+}
+
+.user-managing {
+  width: 100%;
+  height: 45vh;
+}
+
+.table {
+  width: 100%;
+  overflow-y: scroll;
+}
+.table table {
+  width: 100%;
+}
+
+table, tr, th, td {
+  border-collapse: collapse;
+  border: 2px #000000 solid;
+  text-align: center;
+}
+table p, tr p, th p, td p {
+  margin: 0;
+  cursor: pointer;
+  color: hsl(240, 19%, 38%);
+  text-decoration: underline;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(50, 50, 83, 0.5);
+}
+tr:nth-child(1) {
+  position: sticky;
+  top: -1px;
+  background: #eee;
+  box-shadow: inset 2px 2px #000, 0 2px #000;
+}
+tr:nth-child(1) th:nth-last-child(1), tr:nth-child(1) th:nth-last-child(2) {
+  width: 5%;
+  padding: 0 1rem;
+}
+
+.confirm {
+  background-color: green;
+  position: absolute;
+  top: 8%;
+  left: -25%;
+  color: #ffffff;
+  transition: all 0.75s cubic-bezier(0, 0, 0.11, 1);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.confirm p {
+  padding: 0 4rem;
+}
+
+.visible {
+  left: 2% !important;
+}
+
+/*# sourceMappingURL=Admin.css.map */
